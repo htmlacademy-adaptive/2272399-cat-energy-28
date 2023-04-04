@@ -1,4 +1,33 @@
-// Начните писать стили здесь
-@use "fonts";
-@use "visually-hidden";
-@use "page";
+@use 'base/container';
+@use 'base/fonts';
+@use 'base/variables';
+@use 'base/visually-hidden';
+
+@use 'components/additional-products';
+@use 'components/address';
+@use 'components/button';
+@use 'components/contacts';
+@use 'components/copyright';
+@use 'components/example-cat';
+@use 'components/feed-serie';
+@use 'components/guide';
+@use 'components/heading';
+@use 'components/link';
+@use 'components/logo';
+@use 'components/main-container';
+@use 'components/main-header';
+@use 'components/main-nav';
+@use 'components/main-products';
+@use 'components/map';
+@use 'components/page';
+@use 'components/primary-trademark';
+@use 'components/product-card';
+@use 'components/product-list';
+@use 'components/program-form';
+@use 'components/promo';
+@use 'components/secondary-trademark';
+@use 'components/site-list';
+@use 'components/slider';
+@use 'components/social';
+@use 'components/special-offer';
+@use 'components/step-list';
