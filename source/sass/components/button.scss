@@ -1,6 +1,8 @@
 @use '../base/variables' as *;
 
 .button {
+  box-sizing: border-box;
+
   font-family: $fontSecondary;
   font-style: normal;
   font-weight: 400;
@@ -11,5 +13,6 @@
   text-decoration: none;
   color: $fontColorAccent;
 
+  border: none;
   background-color: $buttonColor;
 }

@@ -1,0 +1,15 @@
+@use '../base/variables' as *;
+
+.checkbox {
+  list-style-type: none;
+}
+
+.checkbox__text {
+  font-family: $fontSecondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $fontColor;
+}

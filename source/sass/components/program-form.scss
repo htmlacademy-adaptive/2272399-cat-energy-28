@@ -2,16 +2,26 @@
 
 .program-form {
   font-family: $fontSecondary;
-  text-transform: uppercase;
 }
 
 .program-form__text {
   margin: 0;
+  text-transform: uppercase;
+}
+
+.program-form__group {
+  border: none;
+}
+
+.program-form__group-title {
+  font-size: 24px;
+  line-height: 26px;
 }
 
 .program-form__label-text {
   font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
   color: $fontColorSecondary;
 }
 
@@ -21,4 +31,27 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $fontColorSecondary;
+
+  border: 1px solid $borderColor;
+
+  &--has-icon {
+    border-color: $borderColorSecondary;
+  }
+}
+
+.program-form__textarea {
+  font-family: $fontSecondary;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $fontColorSecondary;
+
+  border: 1px solid $borderColor;
+  resize: none;
+}
+
+.program-form__note {
+  font-family: $font;
+  font-size: 14px;
+  line-height: 16px;
 }
