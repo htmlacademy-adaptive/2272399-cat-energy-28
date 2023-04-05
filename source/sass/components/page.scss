@@ -1,11 +1,16 @@
+@use "../base/variables" as *;
+
 .page {
 
 }
 
 .page__body {
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  color: $fontColor;
+
+  background-color: $bgColor;
 }

@@ -1,0 +1,37 @@
+@use '../base/variables' as *;
+
+.example-cat {
+  background-color: $bgColorSecondary;
+}
+
+.example-cat__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example-cat__text {
+  margin: 0;
+  color: $fontColorSecondary;
+}
+
+.example-cat__description-termin {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+  color: $fontColorSecondary;
+}
+
+.example-cat__description-text {
+  font-family: $fontSecondary;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.example-cat__costs-caption {
+  font-family: $fontSecondary;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}

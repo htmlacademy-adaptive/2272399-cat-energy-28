@@ -1,0 +1,22 @@
+@use '../base/variables' as *;
+
+.feed-serie {
+  background-color: $bgColorSecondary;
+}
+
+.feed-serie__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.feed-serie__description {
+  margin: 0;
+
+  color: $fontColorSecondary;
+}
+
+.feed-serie__link {
+  font-size: 16px;
+  line-height: 16px;
+}
