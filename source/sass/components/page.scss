@@ -1,10 +1,14 @@
 @use "../base/variables" as *;
 
 .page {
-
+  height: 100%;
+  min-height: 100%;
 }
 
 .page__body {
+  margin: 0;
+  height: 100%;
+
   font-family: $font;
   font-style: normal;
   font-weight: 400;

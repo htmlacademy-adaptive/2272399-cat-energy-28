@@ -3,6 +3,15 @@
 .address {
 }
 
+.address__wrapper {
+  display: flex;
+  padding: 26px 0;
+
+  &--secondary {
+    background-color: $bgColorExtra;
+  }
+}
+
 .address__title {
   font-size: 16px;
   line-height: 20px;

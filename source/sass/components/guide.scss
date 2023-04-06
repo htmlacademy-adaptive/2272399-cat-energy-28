@@ -9,6 +9,12 @@
   line-height: 40px;
 }
 
+.guide__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .guide__list-text {
   margin: 0;
   color: $fontColorSecondary;

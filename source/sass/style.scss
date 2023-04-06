@@ -1,4 +1,5 @@
 @use 'base/container';
+@use 'base/global';
 @use 'base/fonts';
 @use 'base/variables';
 @use 'base/visually-hidden';
@@ -9,6 +10,7 @@
 @use 'components/checkbox';
 @use 'components/contacts';
 @use 'components/copyright';
+@use 'components/decor-line';
 @use 'components/example-cat';
 @use 'components/feed-serie';
 @use 'components/guide';
