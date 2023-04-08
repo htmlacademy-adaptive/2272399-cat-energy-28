@@ -1,3 +1,7 @@
+@use '../base/mixin' as mix;
+
+// Socials section
+
 .social__list {
-  list-style-type: none;
+  @include mix.list-reset;
 }

@@ -1,5 +1,5 @@
+@use '../base/mixin' as mix;
+
 .product-list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  @include mix.list-reset;
 }

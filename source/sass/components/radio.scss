@@ -1,15 +1,16 @@
 @use '../base/variables' as *;
+@use '../base/mixin.scss' as mix;
 
 .radio {
-  list-style-type: none;
+  @include mix.list-reset;
 }
 
 .radio__text {
-  font-family: $fontSecondary;
+  font-family: $font-secondary;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: $fontColorSecondarySpecial;
+  color: $font-color-secondary-special;
 }

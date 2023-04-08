@@ -3,7 +3,7 @@
 .button {
   box-sizing: border-box;
 
-  font-family: $fontSecondary;
+  font-family: $font-secondary;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -11,8 +11,8 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: $fontColorAccent;
+  color: $font-color-accent;
 
   border: none;
-  background-color: $buttonColor;
+  background-color: $button-color;
 }
