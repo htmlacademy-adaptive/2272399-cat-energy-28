@@ -1,4 +1,4 @@
-@use '../base/variables' as *;
+@use "../base/variables" as *;
 
 .promo {
   color: $font-color-accent;
@@ -6,7 +6,7 @@
   &--theme-phone {
     position: relative;
 
-    background-image: url('../../img/promo-background.jpg');
+    background-image: url("../../img/promo-background.jpg");
     background-color: $bg-color-accent;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,4 +1,4 @@
-@use '../base/variables.scss' as *;
+@use "../base/variables.scss" as *;
 
 .decor-line {
   position: relative;
@@ -6,7 +6,7 @@
 
 .decor-line::after {
   position: absolute;
-  content: '';
+  content: "";
   background-color: $bg-color-accent;
   height: 2px;
   width: 100%;
