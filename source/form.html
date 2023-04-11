@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
     <header class="main-header">
       <div class="container">
         <a href="index.html" class="main-header__trademark primary-trademark">
-          <img src="source/img/primary-trademark.svg" width="44" height="44" alt="Основной фирменный знак 'Кэт энерджи'.">
+          <img src="img/primary-trademark.svg" width="44" height="44" alt="Основной фирменный знак 'Кэт энерджи'.">
         </a>
         <a href="index.html" class="main-header__trademark secondary-trademark secondary-trademark--active">
-          <img src="source/img/secondary-trademark.svg" width="34" height="38" alt="Фирменный знак 'Кэт энерджи' на мобильных устройствах.">
+          <img src="img/secondary-trademark.svg" width="34" height="38" alt="Фирменный знак 'Кэт энерджи' на мобильных устройствах.">
         </a>
         <a href="index.html" class="main-header__logo-image logo">
-          <img src="source/img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
+          <img src="img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню.</span></button>
@@ -37,7 +38,7 @@
     <main class="main-container">
       <h1 class="main-container__title heading">Подбор программы</h1>
 
-      <form class="program-form" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="program-form container" action="https://echo.htmlacademy.ru/" method="post">
         <div class="container">
           <p class="program-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
@@ -60,30 +61,30 @@
             </label>
           </fieldset>
 
-          <fieldset class="program-form__group program-form__group--radio">
+          <fieldset class="program-form__group">
             <legend class="visually-hidden">Программа питания.</legend>
-            <ul class="program-form__list program-form__list--radio">
-              <li class="program-form__radio-item">
-                <label class="program-form__label">
-                  <input class="program-form__radio-input visually-hidden" type="radio" name="feed-program" value="weight-loss">
-                  <span class="program-form__radio-mark"></span>
-                  <span class="program-form__item-text">Похудение</span>
+            <ul class="program-form__list radio">
+              <li class="radio__item">
+                <label class="radio__label">
+                  <input class="radio__input visually-hidden" type="radio" name="feed-program" value="weight-loss">
+                  <span class="radio__mark"></span>
+                  <span class="radio__text">Похудение</span>
                 </label>
               </li>
 
-              <li class="program-form__radio-item">
-                <label class="program-form__label">
-                  <input class="program-form__radio-input visually-hidden" type="radio" name="feed-program" value="weight-gain">
-                  <span class="program-form__radio-mark"></span>
-                  <span class="program-form__item-text">Набор массы</span>
+              <li class="radio__item">
+                <label class="radio__label">
+                  <input class="radio__input visually-hidden" type="radio" name="feed-program" value="weight-gain">
+                  <span class="radio__mark"></span>
+                  <span class="radio__text">Набор массы</span>
                 </label>
               </li>
 
-              <li class="program-form__radio-item">
-                <label class="program-form__label">
-                  <input class="program-form__radio-input visually-hidden" type="radio" name="feed-program" value="other">
-                  <span class="program-form__radio-mark"></span>
-                  <span class="program-form__item-text">Не знаю (Нужен ваш совет)</span>
+              <li class="radio__item">
+                <label class="radio__label">
+                  <input class="radio__input visually-hidden" type="radio" name="feed-program" value="other">
+                  <span class="radio__mark"></span>
+                  <span class="radio__text">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -106,43 +107,43 @@
           <fieldset class="program-form__group">
             <legend class="program-form__group-title">Комментарий</legend>
             <label class="program-form__label">
-              <textarea name="commentary" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <textarea class="program-form__textarea" name="commentary" placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </fieldset>
 
           <fieldset class="program-form__group">
             <legend class="program-form__group-title">Дополнительно</legend>
 
-            <ul class="program-form__list program-form__list--checkbox">
-              <li class="program-form__checkbox-item">
-                <label class="program-form__label">
-                  <input class="program-form__checkbox-input visually-hidden" type="checkbox" name="sugar-substitute">
-                  <span class="program-form__checkbox-mark"></span>
-                  <span class="program-form__item-text">Сахарозаменитель</span>
+            <ul class="program-form__list checkbox">
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="sugar-substitute">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__text">Сахарозаменитель</span>
                 </label>
               </li>
 
-              <li class="program-form__checkbox-item">
-                <label class="program-form__label">
-                  <input class="program-form__checkbox-input visually-hidden" type="checkbox" name="water">
-                  <span class="program-form__checkbox-mark"></span>
-                  <span class="program-form__item-text">Питьевая вода</span>
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="water">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__text">Питьевая вода</span>
                 </label>
               </li>
 
-              <li class="program-form__checkbox-item">
-                <label class="program-form__label">
-                  <input class="program-form__checkbox-input visually-hidden" type="checkbox" name="milk">
-                  <span class="program-form__checkbox-mark"></span>
-                  <span class="program-form__item-text">Молоко</span>
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="milk">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__text">Молоко</span>
                 </label>
               </li>
 
-              <li class="program-form__checkbox-item">
-                <label class="program-form__label">
-                  <input class="program-form__checkbox-input visually-hidden" type="checkbox" name="vitamins">
-                  <span class="program-form__checkbox-mark"></span>
-                  <span class="program-form__item-text">Витамины</span>
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="vitamins">
+                  <span class="checkbox__mark"></span>
+                  <span class="checkbox__text">Витамины</span>
                 </label>
               </li>
             </ul>
@@ -155,10 +156,12 @@
 
       <section class="address">
         <div class="container">
-          <h2 class="address__title heading">Приглашаем к сотрудничеству дилеров!</h2>
-          <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <div class="address__wrapper address__wrapper--secondary">
+            <h2 class="address__title heading">Приглашаем к сотрудничеству дилеров!</h2>
+            <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
           <div class="address__map map">
-            <img class="map__image" src="source/img/map-image.jpg" width="320" height="362" alt="Карта местоположения компании 'Кэт энерджи'.">
+            <img class="map__image" src="img/map-image.jpg" width="320" height="362" alt="Карта местоположения компании 'Кэт энерджи'.">
           </div>
         </div>
       </section>
@@ -170,7 +173,7 @@
         <section class="main-footer__contacts contacts">
           <h2 class="visually-hidden">Контакты.</h2>
           <a href="index.html" class="main-footer__logo-image logo">
-            <img src="source/img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
+            <img src="img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
           </a>
         </section>
 
@@ -194,7 +197,7 @@
           <div class="copyright__wrapper">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__image" src="source/img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy.">
+              <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy.">
             </a>
           </div>
         </section>

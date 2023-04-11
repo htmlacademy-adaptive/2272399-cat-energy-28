@@ -1,0 +1,7 @@
+@use "../base/mixin" as mix;
+
+// Socials section
+
+.social__list {
+  @include mix.list-reset;
+}

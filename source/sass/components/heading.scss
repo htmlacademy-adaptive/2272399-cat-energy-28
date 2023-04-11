@@ -1,0 +1,9 @@
+@use "../base/variables" as *;
+
+.heading {
+  margin: 0;
+
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 400;
+}

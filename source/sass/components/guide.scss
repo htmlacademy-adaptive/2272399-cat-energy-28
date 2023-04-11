@@ -1,0 +1,20 @@
+@use "../base/variables" as *;
+@use "../base/mixin.scss" as mix;
+
+.guide {
+
+}
+
+.guide__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.guide__list {
+  @include mix.list-reset;
+}
+
+.guide__list-text {
+  margin: 0;
+  color: $font-color-secondary;
+}

@@ -1,0 +1,16 @@
+@use "../base/variables.scss" as *;
+
+.decor-line {
+  position: relative;
+}
+
+.decor-line::after {
+  position: absolute;
+  content: "";
+  background-color: $bg-color-accent;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+}

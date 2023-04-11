@@ -1,0 +1,9 @@
+@use "../base/variables" as *;
+
+.link {
+  font-family: $font-secondary;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $link-color;
+}

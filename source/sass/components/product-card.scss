@@ -1,0 +1,24 @@
+@use "../base/variables" as *;
+
+.product-card {
+  line-height: 14px;
+  color: $font-color-secondary;
+
+  &--primary {
+    border: 1px solid $border-color-third;
+    padding: 25px 0;
+  }
+
+  &--secondary {
+    border: 1px solid $border-color-secondary;
+    padding: 13px 0 19px;
+  }
+}
+
+.product-card__title {
+  color: $font-color-secondary-special;
+}
+
+.product-card__description {
+  margin: 0;
+}
