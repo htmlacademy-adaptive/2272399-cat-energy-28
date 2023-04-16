@@ -2,7 +2,9 @@
 @use "../base/mixin.scss" as mix;
 
 .checkbox {
-  @include mix.list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
 }
 
 .checkbox__text {

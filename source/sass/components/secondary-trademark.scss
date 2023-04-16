@@ -1,0 +1,9 @@
+@use "../base/variables" as *;
+
+.secondary-trademark {
+  display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

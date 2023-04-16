@@ -4,4 +4,7 @@
 
 .social__list {
   @include mix.list-reset;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

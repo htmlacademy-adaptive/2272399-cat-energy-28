@@ -5,6 +5,7 @@
 @use "base/visually-hidden";
 
 // Blocks
+@use "components/heading";
 @use "components/additional-products";
 @use "components/address";
 @use "components/button";
@@ -15,7 +16,6 @@
 @use "components/example-cat";
 @use "components/feed-serie";
 @use "components/guide";
-@use "components/heading";
 @use "components/link";
 @use "components/logo";
 @use "components/main-container";
@@ -27,7 +27,8 @@
 @use "components/page";
 @use "components/primary-trademark";
 @use "components/product-card";
-@use "components/product-list";
+@use "components/product-list-primary";
+@use "components/product-list-secondary";
 @use "components/program-form";
 @use "components/promo";
 @use "components/radio";

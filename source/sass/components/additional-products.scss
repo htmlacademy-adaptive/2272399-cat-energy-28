@@ -1,7 +1,19 @@
-@use "../base/variables.scss" as *;
+@use "../base/variables" as *;
+@use "../base/mixin" as mix;
 
 // Раздел "Дополнительные товары"
 
 .additional-products__title {
+  margin: 0;
+  margin-bottom: 36px;
   background-color: $bg-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.additional-products__product-list {
+  @include mix.list-reset;
 }
