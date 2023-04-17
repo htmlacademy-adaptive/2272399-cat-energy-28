@@ -4,8 +4,7 @@
 // Раздел "Дополнительные товары"
 
 .additional-products__title {
-  margin: 0;
-  margin-bottom: 36px;
+  margin: 0 0 36px 0;
   background-color: $bg-color;
 
   @media (min-width: $tablet-width) {

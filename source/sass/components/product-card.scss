@@ -29,10 +29,12 @@
   &--secondary {
     grid-template-columns: 1fr;
     grid-template-rows: none;
+
+    padding: 13px 0 19px;
+
     border: 1px solid $border-color-secondary;
     border-left: none;
     border-right: none;
-    padding: 13px 0 19px;
     background-color: transparent;
 
     @media (min-width: $tablet-width) {

@@ -11,12 +11,11 @@
 }
 
 .example-cat__title {
-  margin: 0;
+  margin: 0 0 40px 0;
+  grid-column: 1 / -1;
 
   font-size: 36px;
   line-height: 40px;
-  margin-bottom: 40px;
-  grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -44,8 +43,7 @@
 }
 
 .example-cat__text {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   color: $font-color-secondary;
 
   @media (min-width: $tablet-width) {
@@ -57,8 +55,7 @@
 }
 
 .example-cat__description-list {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   display: flex;
   justify-content: space-between;
 

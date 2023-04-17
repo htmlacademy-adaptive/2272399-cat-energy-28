@@ -20,9 +20,9 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     background-color: $bg-color;
-    top: 50%;
+    top: 95px;
     left: 0;
-    transform: translateY(-50%);
+    width: 47%;
   }
 }
 
