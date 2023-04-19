@@ -1,6 +1,6 @@
 @use "../base/variables" as *;
 
-.main-nav{
+.main-nav {
   @media (min-width: $tablet-width) {
     display: flex;
   }

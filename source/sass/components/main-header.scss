@@ -3,7 +3,7 @@
 .main-header {
   background-color: $bg-color;
 
-  @media (min-width: $desktop-width){
+  @media (min-width: $desktop-width) {
     z-index: 1;
     background-color: transparent;
     position: absolute;
