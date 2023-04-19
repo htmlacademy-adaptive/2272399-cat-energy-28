@@ -3,19 +3,27 @@
 
 .program-form {
   font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .program-form__wrapper {
+  padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
-    padding: 0 40px;
+    padding: 0 40px 72px 40px;
     grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
+    padding: 0 0 82px 0;
   }
 }
 
@@ -26,33 +34,98 @@
 }
 
 .program-form__group {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 14px;
   grid-column: 1 / -1;
-
-  margin: 0 0 24px 0;
+  margin: 0;
   padding: 0;
+
   border: none;
 
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-
   &--cat-information {
+    margin: 0 0 24px 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 72px 0;
+    }
+
     @media (min-width: $desktop-width) {
+      margin: 0 0 69px 0;
       grid-column: 1 / 3;
     }
+
   }
 
   &--feed-program {
+    margin: 0 0 26px 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 71px 0;
+    }
+
     @media (min-width: $desktop-width) {
+      margin: 0 0 65px 80px;
       grid-column: 3 / -1;
+    }
+  }
+
+  &--owner {
+    margin: 0 0 23px 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 65px 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      gap: 78px;
+      margin: 0 0 67px 0;
+    }
+  }
+
+  &--commentary {
+    margin: 0 0 22px 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 65px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 67px 0;
+    }
+  }
+
+  &--additional {
+    margin: 0 0 34px 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 54px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 61px 0;
     }
   }
 }
 
 .program-form__group-title {
-  margin-bottom: 35px;
+  padding: 0;
+  margin: 0 0 35px 0;
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 76px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &--additional {
+    @media (min-width: $tablet-width) {
+      margin: 0 0 57px 0;
+    }
+  }
 }
 
 .program-form__label {
@@ -62,14 +135,16 @@
 }
 
 .program-form__label-text {
-  font-size: 16px;
-  line-height: 18px;
+  display: flex;
+  align-items: center;
+
   text-transform: uppercase;
   color: $font-color-secondary;
 }
 
 .program-form__input {
   flex-grow: 1;
+  padding: 11px 20px;
 
   font-family: $font-secondary;
   font-size: 16px;
@@ -82,23 +157,22 @@
   &--has-icon {
     border-color: $border-color-secondary;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .program-form__list {
   @include mix.list-reset;
-
-  &--additional {
-    @media (min-width: $desktop-width) {
-      flex-grow: 1;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
 }
 
 .program-form__textarea {
   flex-grow: 1;
   min-height: 150px;
+  margin: 0;
+  padding: 10px 19px;
 
   font-family: $font-secondary;
   font-size: 16px;
@@ -108,18 +182,41 @@
 
   border: 1px solid $border-color;
   resize: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .program-form__button {
+  margin: 0 0 21px 0;
   padding: 7px 45px;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 13px 45px;
     grid-column: 1 / 3;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
 .program-form__note {
+  display: flex;
+  justify-content: center;
+
   font-family: $font;
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    justify-content: start;
+    grid-column: 3 / -1;
+    margin-left: 64px;
+
+    font-size: 16px;
+  }
 }

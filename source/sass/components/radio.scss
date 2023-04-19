@@ -2,10 +2,16 @@
 @use "../base/mixin.scss" as mix;
 
 .radio {
-  padding: 20px 0;
+  padding: 22px 0 19px 0;
   display: flex;
   flex-direction: column;
   gap: 13px;
+
+  border: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 0 25px 88px;
+  }
 }
 
 .radio__text {
@@ -16,4 +22,9 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $font-color-secondary-special;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
