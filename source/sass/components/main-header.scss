@@ -1,0 +1,72 @@
+@use "../base/variables" as *;
+
+.main-header {
+  background-color: $bg-color;
+
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 56px;
+  }
+}
+
+.main-header__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 90%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 80%;
+    max-width: $desktop-width;
+  }
+}
+
+.main-header__logo {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33px 1fr 33px;
+  align-items: center;
+  justify-items: center;
+  padding: 12px 0 16.5px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.main-header__logo-image {
+  @media (min-width: $tablet-width) {
+    margin-left: 12px;
+  }
+}
+
+.main-header__trademark {
+  height: 37px;
+
+  @media (min-width: $tablet-width) {
+    height: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 70px;
+  }
+}
+
+.main-header__nav {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}

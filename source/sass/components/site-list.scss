@@ -1,3 +1,4 @@
+@use "../base/variables" as *;
 @use "../base/mixin.scss" as mix;
 
 // Site navigation
@@ -9,10 +10,34 @@
 .site-list__item {
   padding: 22px 60px 24px;
   text-align: center;
+
+  border: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 18px 17px 12px;
+    border: none;
+  }
 }
 
 .site-list__link {
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--cat-theme {
+    @media (min-width: $desktop-width) {
+      color: $font-color-accent;
+    }
+  }
 }

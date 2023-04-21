@@ -1,0 +1,10 @@
+@use "../base/variables" as *;
+
+.map {
+  display: flex;
+}
+
+.map__image {
+  width: 100%;
+  object-fit: cover;
+}

@@ -3,3 +3,31 @@
 .main-footer {
   background-color: $bg-color-extra;
 }
+
+.main-footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 40px 0;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main-footer__contacts {
+  justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    justify-self: start;
+  }
+}
+
+.main-footer__social {
+  justify-self: center;
+  display: flex;
+}
+
+.main-footer__copyright {
+
+}

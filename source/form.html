@@ -2,23 +2,20 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
     <header class="main-header">
-      <div class="container">
-        <a href="index.html" class="main-header__trademark primary-trademark">
-          <img src="img/primary-trademark.svg" width="44" height="44" alt="Основной фирменный знак 'Кэт энерджи'.">
+      <div class="main-header__wrapper">
+        <a href="index.html" class="main-header__logo">
+          <img class="main-header__trademark primary-trademark" src="img/primary-trademark.svg" width="44" height="44" alt="Основной фирменный знак 'Кэт энерджи'.">
+          <img class="main-header__trademark secondary-trademark" src="img/secondary-trademark.svg" width="34" height="38" alt="Фирменный знак 'Кэт энерджи' на мобильных устройствах.">
+          <img class="main-header__logo-image logo" src="img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
         </a>
-        <a href="index.html" class="main-header__trademark secondary-trademark secondary-trademark--active">
-          <img src="img/secondary-trademark.svg" width="34" height="38" alt="Фирменный знак 'Кэт энерджи' на мобильных устройствах.">
-        </a>
-        <a href="index.html" class="main-header__logo-image logo">
-          <img src="img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
-        </a>
-        <nav class="main-nav">
+        <nav class="main-header__nav main-nav">
           <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню.</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -35,14 +32,16 @@
       </div>
     </header>
 
-    <main class="main-container">
-      <h1 class="main-container__title heading">Подбор программы</h1>
+    <main class="main-container main-container--secondary">
+      <div class="container">
+        <h1 class="main-container__title main-container__title--form heading">Подбор программы</h1>
+      </div>
 
-      <form class="program-form container" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="container">
+      <form class="program-form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="program-form__wrapper container">
           <p class="program-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-          <fieldset class="program-form__group">
+          <fieldset class="program-form__group program-form__group--cat-information">
             <legend class="visually-hidden">Основная информация о коте.</legend>
 
             <label class="program-form__label">
@@ -61,7 +60,7 @@
             </label>
           </fieldset>
 
-          <fieldset class="program-form__group">
+          <fieldset class="program-form__group program-form__group--feed-program">
             <legend class="visually-hidden">Программа питания.</legend>
             <ul class="program-form__list radio">
               <li class="radio__item">
@@ -90,7 +89,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="program-form__group">
+          <fieldset class="program-form__group program-form__group--owner">
             <legend class="program-form__group-title">Контактные данные (владельца кота)</legend>
 
             <label class="program-form__label">
@@ -104,17 +103,17 @@
             </label>
           </fieldset>
 
-          <fieldset class="program-form__group">
+          <fieldset class="program-form__group program-form__group--commentary">
             <legend class="program-form__group-title">Комментарий</legend>
             <label class="program-form__label">
               <textarea class="program-form__textarea" name="commentary" placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </fieldset>
 
-          <fieldset class="program-form__group">
-            <legend class="program-form__group-title">Дополнительно</legend>
+          <fieldset class="program-form__group program-form__group--additional">
+            <legend class="program-form__group-title program-form__group-title-additional">Дополнительно</legend>
 
-            <ul class="program-form__list checkbox">
+            <ul class="program-form__list program-form__list--additional checkbox">
               <li class="checkbox__item">
                 <label class="checkbox__label">
                   <input class="checkbox__input visually-hidden" type="checkbox" name="sugar-substitute">
@@ -154,21 +153,21 @@
         </div>
       </form>
 
-      <section class="address">
+      <section class="address address--secondary">
         <div class="container">
-          <div class="address__wrapper address__wrapper--secondary">
+          <div class="address__wrapper">
             <h2 class="address__title heading">Приглашаем к сотрудничеству дилеров!</h2>
             <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
-          <div class="address__map map">
-            <img class="map__image" src="img/map-image.jpg" width="320" height="362" alt="Карта местоположения компании 'Кэт энерджи'.">
-          </div>
+        </div>
+        <div class="address__map map">
+          <img class="map__image" src="img/map-image.jpg" width="320" height="362" alt="Карта местоположения компании 'Кэт энерджи'.">
         </div>
       </section>
     </main>
 
     <footer class="main-footer">
-      <div class="container">
+      <div class="main-footer__wrapper container">
 
         <section class="main-footer__contacts contacts">
           <h2 class="visually-hidden">Контакты.</h2>

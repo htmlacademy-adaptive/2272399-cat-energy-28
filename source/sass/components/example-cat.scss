@@ -3,16 +3,83 @@
 .example-cat {
   padding: 25px 0 40px;
   background-color: $bg-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    background-image: linear-gradient($bg-color 58%, $bg-color-secondary 58%);
+  }
 }
 
 .example-cat__title {
+  margin: 0 0 40px 0;
+  grid-column: 1 / -1;
+
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+}
+
+.example-cat__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.example-cat__content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .example-cat__text {
-  margin: 0;
+  margin: 0 0 20px 0;
   color: $font-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
+}
+
+.example-cat__description-list {
+  margin: 0 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+    gap: 42px;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.example-cat__description-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 14px;
+
+  border: 1px solid $border-color-secondary;
+  border-radius: 3px;
 }
 
 .example-cat__description-termin {
@@ -20,6 +87,11 @@
   line-height: 12px;
   text-transform: lowercase;
   color: $font-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .example-cat__description-text {
@@ -29,6 +101,11 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example-cat__costs-caption {
@@ -37,4 +114,19 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.example-cat__image-wrapper {
+  margin: 0;
+  min-height: 256px;
 }

@@ -1,5 +1,0 @@
-@use "../base/mixin" as mix;
-
-.product-list {
-  @include mix.list-reset;
-}
