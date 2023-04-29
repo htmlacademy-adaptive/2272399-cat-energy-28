@@ -2,12 +2,19 @@
 @use "../base/mixin.scss" as mix;
 
 .guide {
-  @media (min-width: $tablet-width) {
-    border-bottom: 1px solid $border-color;
-  }
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    //border-bottom: 1px solid $border-color;
+    position: relative;
 
-  @media (min-width: $desktop-width) {
-    border-bottom: none;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: -47px;
+      left: 0;
+      background-color: $border-color;
+    }
   }
 }
 
@@ -20,7 +27,7 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 32px;
+    margin: 0 0 32px 0;
   }
 }
 
@@ -28,34 +35,117 @@
   @include mix.list-reset;
 
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr;
   row-gap: 20px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 2fr 2fr;
-    column-gap: 8%;
-    row-gap: 37px;
+    column-gap: 153px;
+    row-gap: 40px;
     align-items: start;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 8%;
-    row-gap: 37px;
+    column-gap: 83px;
     align-items: start;
   }
 }
 
 .guide__list-item {
-  grid-column: 2 / -1;
+  position: relative;
+  padding: 0 0 0 81px;
+  min-height: 60px;
 
   @media (min-width: $tablet-width) {
     grid-column: auto;
     padding: 150px 121px 57px 0;
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      font-family: $font-secondary;
+      color: $bg-color-extra;
+      font-size: 280px;
+      line-height: 280px;
+      top: 0;
+      left: 118px;
+
+      @media (min-width: $desktop-width) {
+        left: 113px;
+      }
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 150px 22px 57px 0;
+    padding: 150px 22px 0 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+
+    background-color: $bg-color-accent;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("../../img/icon-leaf.svg");
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: "1";
+      }
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../../img/icon-powder.svg");
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: "2";
+      }
+    }
+  }
+
+  &--food {
+    &::before {
+      background-image: url("../../img/icon-food.svg");
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: "3";
+      }
+    }
+  }
+
+  &--time {
+    &::before {
+      background-image: url("../../img/icon-time.svg");
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: "4";
+      }
+    }
   }
 }
 

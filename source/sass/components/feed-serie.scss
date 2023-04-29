@@ -1,6 +1,12 @@
 @use "../base/variables" as *;
+$border-color-description: #d9d9d9;
+
 
 .feed-serie {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
   background-color: $bg-color-secondary;
   padding: 30px 33px 18px 20px;
 
@@ -11,23 +17,107 @@
   @media (min-width: $desktop-width) {
     padding: 77px 52px 55px;
   }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: 24px;
+    left: 22px;
+
+    background-color: $bg-color-accent;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 200px;
+      left: auto;
+      top: 92px;
+      right: 62px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+      right: auto;
+      top: 47px;
+      left: 52px;
+    }
+  }
+
+  &--slim::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/cat-slim.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 36px;
+    height: 50px;
+    top: 21px;
+    left: 29px;
+
+    @media (min-width: $tablet-width) {
+      width: 140px;
+      height: 194px;
+      left: auto;
+      top: 81px;
+      right: 92px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 70px;
+      height: 97px;
+      right: auto;
+      top: 41px;
+      left: 67px;
+    }
+  }
+
+  &--pro::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/cat-pro.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 67px;
+    height: 28px;
+    top: 35px;
+    left: 13px;
+
+    @media (min-width: $tablet-width) {
+      width: 268px;
+      height: 112px;
+      left: auto;
+      top: 135px;
+      right: 28px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      height: 56px;
+      right: auto;
+      top: 67px;
+      left: 33px;
+    }
+  }
 }
 
 .feed-serie__title {
-  margin: 0 0 29px 0;
+  margin: 0 0 29px 72px;
 
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 24px 0;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 73px;
+    margin: 0 0 73px 162px;
   }
 }
 
@@ -39,16 +129,57 @@
     font-size: 16px;
     line-height: 24px;
     color: $font-color;
-    margin-bottom: 48px;
+    margin: 0 0 48px 0;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 72px;
-    margin-bottom: 23px;
+    margin: 0 0 23px 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -23px;
+      background-color: $border-color-description;
+    }
   }
 }
 
 .feed-serie__link {
+  align-self: start;
+  margin-top: auto;
+  position: relative;
+
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 12px;
+    background-image: url("../../img/arrow-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    right: -25px;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      right: -35px;
+    }
+  }
 }

@@ -8,11 +8,21 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
+    gap: 32px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.checkbox__item {
+  display: flex;
+}
+
+.checkbox__label {
+  position: relative;
+  padding: 6px 0;
 }
 
 .checkbox__text {
@@ -23,9 +33,48 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $font-color;
+  margin: 0 0 0 45px;
+
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin: 0 0 0 60px;
   }
+}
+
+.checkbox__mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+
+  border: 1px solid $border-color-secondary;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.checkbox__input:checked + .checkbox__mark::after {
+  position: absolute;
+    content: "";
+    width: 18px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url("../../img/checkbox.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      width: 24px;
+      height: 19px;
+    }
 }
