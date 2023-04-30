@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
-    width: calc(100% - 30px);
+    width: calc(100% - 60px);
 
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: calc(100% - 110px);
+    width: calc(100% - 220px);
     max-width: $desktop-width;
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;

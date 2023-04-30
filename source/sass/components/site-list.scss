@@ -63,4 +63,8 @@
       color: $font-color-accent;
     }
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
 }

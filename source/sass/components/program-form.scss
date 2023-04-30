@@ -14,7 +14,7 @@
 
 .program-form__wrapper {
   @media (min-width: $desktop-width) {
-    width: 80%;
+    width: calc(100% - 220px);
     max-width: $desktop-width;
     margin: 0 auto;
 
@@ -102,7 +102,8 @@
   &--owner {
     @media (min-width: $desktop-width) {
       flex-direction: row;
-      gap: 78px;
+      flex-wrap: wrap;
+      column-gap: 78px;
     }
   }
 }
@@ -147,6 +148,12 @@
   display: flex;
   gap: 13px;
 
+  &--has-icon:focus-within {
+    &::after {
+      background-color: $bg-color-accent;
+    }
+  }
+
   &--email {
     position: relative;
 
@@ -159,10 +166,8 @@
       transform: translateY(-50%);
       width: 18px;
       height: 14px;
-      background-image: url("../../img/icon-email.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      background-color: #000;
+      mask-image: url("../../img/icon-email.svg");
 
       @media (min-width: $tablet-width) {
         right: 18px;
@@ -181,15 +186,19 @@
       right: 15px;
       transform: translateY(-50%);
       width: 15px;
-      height: 15px;
-      background-image: url("../../img/icon-phone.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      height: 16px;
+      background-color: #000;
+      mask-image: url("../../img/icon-phone.svg");
 
       @media (min-width: $tablet-width) {
         right: 18px;
       }
+    }
+  }
+
+  &--error {
+    &::after {
+      background-color: $error;
     }
   }
 }
@@ -215,8 +224,20 @@
   border: 1px solid $border-color;
   background-color: transparent;
 
-  &--has-icon {
+  &:hover {
     border-color: $border-color-secondary;
+  }
+
+  &:focus {
+    outline: 2px solid $border-color-focus;
+  }
+
+  &[type="tel"]:invalid:not(:placeholder-shown) {
+    outline: 1px solid $error;
+  }
+
+  &[type="email"]:invalid:not(:placeholder-shown) {
+    outline: 1px solid $error;
   }
 
   @media (min-width: $tablet-width) {

@@ -18,11 +18,11 @@ img {
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: calc(100% - 30px);
+    width: calc(100% - 60px);
   }
 
   @media (min-width: $desktop-width) {
-    width: calc(100% - 110px);
+    width: calc(100% - 220px);
     max-width: $desktop-width;
     position: relative;
   }

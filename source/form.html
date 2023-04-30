@@ -105,14 +105,14 @@
           </div>
 
           <div class="container program-form__input-wrapper program-form__input-wrapper--owner">
-            <label class="program-form__label program-form__label--email">
+            <label class="program-form__label program-form__label--has-icon program-form__label--email">
               <span class="program-form__label-text">e-mail:*</span>
-              <input class="program-form__input program-form__input--has-icon" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="program-form__input program-form__input--has-icon" type="email" name="email" placeholder="kuklachev@gmail.com" required pattern="\w+@[a-zA-Z]+\.[a-zA-Z]+">
             </label>
 
-            <label class="program-form__label program-form__label--phone">
+            <label class="program-form__label program-form__label--has-icon program-form__label--phone">
               <span class="program-form__label-text">Телефон:*</span>
-              <input class="program-form__input program-form__input--has-icon" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <input class="program-form__input program-form__input--has-icon" type="tel" name="phone" placeholder="8 (960) 900-60-90" required pattern="[0-9]{11}">
             </label>
           </div>
         </fieldset>
@@ -234,4 +234,6 @@
         </section>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
+</html>

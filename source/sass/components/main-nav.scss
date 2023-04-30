@@ -4,6 +4,7 @@ $toggle-color: #000000;
 .main-nav {
   @media (min-width: $tablet-width) {
     display: flex;
+    justify-content: end;
   }
 }
 
@@ -13,6 +14,7 @@ $toggle-color: #000000;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
