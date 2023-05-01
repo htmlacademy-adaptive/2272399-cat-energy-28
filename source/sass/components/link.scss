@@ -6,4 +6,8 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $link-color;
+
+  &:active {
+    opacity: 0.3;
+  }
 }

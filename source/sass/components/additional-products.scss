@@ -23,12 +23,12 @@
 }
 
 .additional-products__wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 
   @media (min-width: $desktop-width) {
-    flex-direction: row;
-    gap: 79px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
   }
 }
 
@@ -42,6 +42,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    grid-column: 1 / 4;
   }
 }
 

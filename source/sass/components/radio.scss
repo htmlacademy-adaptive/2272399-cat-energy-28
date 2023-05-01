@@ -7,11 +7,19 @@
   flex-direction: column;
   gap: 13px;
 
-  border: 1px solid $border-color;
-
   @media (min-width: $tablet-width) {
-    padding: 25px 0 25px 88px;
+    border: 1px solid $border-color;
+    padding: 25px 0 25px 28px;
   }
+}
+
+.radio__item {
+  display: flex;
+}
+
+.radio__label {
+  position: relative;
+  padding: 5px 0;
 }
 
 .radio__text {
@@ -22,9 +30,59 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $font-color-secondary-special;
+  margin: 0 0 0 45px;
+
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin: 0 0 0 60px;
   }
+}
+
+.radio__mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -2px;
+  left: 0;
+  cursor: pointer;
+
+  border: 1px solid $border-color-secondary;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: 0;
+  }
+}
+
+.radio__input:checked + .radio__mark::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: $bg-color-accent;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.radio__input:hover + .radio__mark {
+  border-color: $border-color-secondary-hover;
+}
+
+.radio__input:disabled + .radio__mark,
+.radio__input:disabled ~ .radio__text {
+  opacity: 0.3;
+  cursor: default;
 }

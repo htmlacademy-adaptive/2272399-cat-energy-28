@@ -13,4 +13,13 @@
 
   border: none;
   background-color: $button-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-color-hover;
+  }
+
+  &:active {
+    color: $font-color-accent-pressed;
+  }
 }

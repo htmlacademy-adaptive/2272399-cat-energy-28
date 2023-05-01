@@ -24,9 +24,10 @@
 @use "components/map";
 @use "components/page";
 @use "components/primary-trademark";
-@use "components/product-card";
-@use "components/product-list-primary";
-@use "components/product-list-secondary";
+@use "components/product-card-main";
+@use "components/product-list-main";
+@use "components/product-list-additional";
+@use "components/product-card-additional.scss";
 @use "components/program-form";
 @use "components/promo";
 @use "components/radio";

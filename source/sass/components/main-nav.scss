@@ -1,8 +1,10 @@
 @use "../base/variables" as *;
+$toggle-color: #000000;
 
 .main-nav {
   @media (min-width: $tablet-width) {
     display: flex;
+    justify-content: end;
   }
 }
 
@@ -12,13 +14,88 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .main-nav__toggle {
+  z-index: 2;
   position: absolute;
+  width: 64px;
+  height: 64px;
+  right: 0;
+  top: 0;
+  display: block;
+  padding: 0;
+
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 1.5px;
+  background-color: $toggle-color;
+  box-shadow: 0 8px 0 0 $toggle-color, 0 16px 0 0 $toggle-color;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: -65px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 24px;
+    height: 1.5px;
+    background-color: $toggle-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main-nav--opened {
+    z-index: 1;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    min-height: 80vh;
+    width: 100vw;
+  }
+
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--no-js .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--no-js {
+    position: static;
+  }
+
+  .main-nav--no-js .site-list__item {
+    display: block;
   }
 }

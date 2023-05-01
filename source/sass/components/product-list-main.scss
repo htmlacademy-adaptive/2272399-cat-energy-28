@@ -1,17 +1,24 @@
 @use "../base/variables" as *;
 @use "../base/mixin" as mix;
 
-.product-list-primary {
+
+.product-list-main {
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 140px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
   }
+}
+
+.product-list-main__item {
+  display: flex;
+  flex-direction: column;
 }

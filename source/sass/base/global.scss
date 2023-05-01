@@ -14,15 +14,16 @@ img {
 }
 
 .container {
+  display: block;
   width: calc(100% - 40px);
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 90%;
+    width: calc(100% - 60px);
   }
 
   @media (min-width: $desktop-width) {
-    width: 80%;
+    width: calc(100% - 220px);
     max-width: $desktop-width;
     position: relative;
   }

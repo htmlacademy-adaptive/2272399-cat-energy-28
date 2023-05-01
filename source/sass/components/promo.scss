@@ -1,65 +1,49 @@
 @use "../base/variables" as *;
+$bg-color-promo: #64a73c;
 
 .promo {
   color: $font-color-accent;
   position: relative;
 
+  background-image: url("../../img/promo-background-phone.jpg"), linear-gradient($bg-color-promo 60%, $bg-color 60%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 0;
+
   @media (min-width: $tablet-width) {
     color: $font-color;
+
+    background: none;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 112px;
-  }
 
-  &::before {
-    z-index: -3;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 68%;
-    top: 0;
-    left: 0;
 
-    background-image: url("../../img/promo-background.jpg");
-    background-color: $bg-color-accent;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: block;
+    &::before {
+      z-index: -3;
+      position: absolute;
+      content: "";
       height: 100%;
       width: 50%;
+      top: 0;
       left: 50%;
-    }
-  }
-
-  &::after {
-    z-index: -2;
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 68%;
-
-    background-color: $bg-color-accent;
-    opacity: 85%;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-
-    @media (min-width: $desktop-width) {
       display: block;
+
+      background-image: url("../../img/promo-background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &::after {
+      z-index: -2;
+      position: absolute;
+      content: "";
       height: 100%;
       width: 50%;
+      top: 0;
       left: 50%;
+      background-color: $bg-color-accent;
+      opacity: 85%;
     }
   }
 }
