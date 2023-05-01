@@ -62,21 +62,21 @@
 
 .checkbox__input:checked + .checkbox__mark::after {
   position: absolute;
-    content: "";
-    width: 18px;
-    height: 14px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  content: "";
+  width: 18px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    background-image: url("../../img/checkbox.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../../img/checkbox.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    @media (min-width: $tablet-width) {
-      width: 24px;
-      height: 19px;
-    }
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 19px;
+  }
 }
 
 .checkbox__input:hover + .checkbox__mark {
@@ -84,7 +84,7 @@
 }
 
 .checkbox__input:disabled + .checkbox__mark,
-.checkbox__input:disabled ~ .checkbox__text{
+.checkbox__input:disabled ~ .checkbox__text {
   opacity: 0.3;
   cursor: default;
 }

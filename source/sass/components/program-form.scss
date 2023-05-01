@@ -109,6 +109,8 @@
 }
 
 .program-form__group-title-wrapper {
+  width: 100%;
+  padding: 0;
   margin: 0 0 35px 0;
 
   @media (min-width: $tablet-width) {
@@ -123,10 +125,11 @@
 }
 
 .program-form__group-title {
-  padding: 0 23px 0 0;
+  display: inline-block;
+  padding: 0 20px 0 0;
+
   font-size: 24px;
   line-height: 26px;
-  display: inline-block;
 
   background-color: $bg-color;
 
@@ -166,7 +169,7 @@
       transform: translateY(-50%);
       width: 18px;
       height: 14px;
-      background-color: #000;
+      background-color: #000000;
       mask-image: url("../../img/icon-email.svg");
 
       @media (min-width: $tablet-width) {
@@ -187,7 +190,7 @@
       transform: translateY(-50%);
       width: 15px;
       height: 16px;
-      background-color: #000;
+      background-color: #000000;
       mask-image: url("../../img/icon-phone.svg");
 
       @media (min-width: $tablet-width) {

@@ -21,7 +21,7 @@
   }
 }
 
-.site-list__item--active .site-list__link{
+.site-list__item--active .site-list__link {
   @media (min-width: $tablet-width) {
     &::after {
       position: absolute;

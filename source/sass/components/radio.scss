@@ -82,7 +82,7 @@
 }
 
 .radio__input:disabled + .radio__mark,
-.radio__input:disabled ~ .radio__text{
+.radio__input:disabled ~ .radio__text {
   opacity: 0.3;
   cursor: default;
 }
