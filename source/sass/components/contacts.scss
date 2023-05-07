@@ -1,0 +1,31 @@
+@use "../base/variables" as *;
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+  }
+}
+
+.contacts__logo {
+  display: flex;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.contacts__logo-image {
+  @media (min-width: $tablet-width) {
+    width: 143px;
+    height: 26px;
+  }
+}

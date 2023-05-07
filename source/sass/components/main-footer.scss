@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+$border-color-sections: #d9d9d9;
 
 .main-footer {
   background-color: $bg-color-extra;
@@ -7,8 +8,8 @@
 .main-footer__wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 40px 0;
-  gap: 20px;
+  padding: 20px 0;
+
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
@@ -16,18 +17,21 @@
 }
 
 .main-footer__contacts {
-  justify-self: center;
-
-  @media (min-width: $tablet-width) {
-    justify-self: start;
+  @media (max-width: $tablet-width) {
+    border-bottom: 1px solid $border-color-sections;
   }
 }
 
 .main-footer__social {
-  justify-self: center;
-  display: flex;
+  @media (max-width: $tablet-width) {
+    border-bottom: 1px solid $border-color-sections;
+  }
 }
 
 .main-footer__copyright {
+  display: flex;
 
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+  }
 }

@@ -1,6 +1,8 @@
 @use "../base/variables" as *;
 @use "../base/mixin" as mix;
 
+$between-tablet-width: 1000px;
+$list-desktop-width: 1440px;
 
 .product-list-main {
   display: grid;
@@ -12,9 +14,13 @@
     row-gap: 140px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $between-tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $list-desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    gap: 63px 80px;
   }
 }
 
