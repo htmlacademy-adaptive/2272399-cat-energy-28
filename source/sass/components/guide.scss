@@ -3,7 +3,6 @@
 
 .guide {
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    //border-bottom: 1px solid $border-color;
     position: relative;
 
     &::after {
@@ -92,8 +91,10 @@
     background-color: $bg-color-accent;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 26px 30px;
 
     @media (min-width: $tablet-width) {
+      background-size: 26px 30px;
       top: 40px;
       width: 80px;
       height: 80px;
@@ -102,7 +103,7 @@
 
   &--leaf {
     &::before {
-      background-image: url("../../img/icon-leaf.svg");
+      background-image: url("../../img/icons/sprite.svg#icon-leaf");
     }
 
     @media (min-width: $tablet-width) {
@@ -114,7 +115,7 @@
 
   &--powder {
     &::before {
-      background-image: url("../../img/icon-powder.svg");
+      background-image: url("../../img/icons/sprite.svg#icon-powder");
     }
 
     @media (min-width: $tablet-width) {
@@ -126,7 +127,7 @@
 
   &--food {
     &::before {
-      background-image: url("../../img/icon-food.svg");
+      background-image: url("../../img/icons/sprite.svg#icon-food");
     }
 
     @media (min-width: $tablet-width) {
@@ -138,7 +139,7 @@
 
   &--time {
     &::before {
-      background-image: url("../../img/icon-time.svg");
+      background-image: url("../../img/icons/sprite.svg#icon-time");
     }
 
     @media (min-width: $tablet-width) {

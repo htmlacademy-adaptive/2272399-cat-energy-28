@@ -22,7 +22,7 @@
     top: 65px;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url("../../img/icon-gift.svg");
+    background-image: url("../../img/icons/sprite.svg#icon-gift");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -40,13 +40,22 @@
     }
   }
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/special-offer@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 200px;
     justify-content: end;
     padding: 71px 124px 69px 0;
 
+    background-image: url("../../img/special-offer-tablet.jpg");
     background-position: right 60%;
     box-shadow: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/special-offer-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -54,7 +63,12 @@
     justify-content: center;
     padding: 185px 20px 42px;
 
+    background-image: url("../../img/special-offer-desktop.jpg");
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/special-offer-desktop@2x.jpg");
+    }
   }
 }
 

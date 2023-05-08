@@ -151,9 +151,19 @@
   display: flex;
   gap: 13px;
 
+  &--has-icon {
+    gap: 10px;
+  }
+
   &--has-icon:focus-within {
     &::after {
       background-color: $bg-color-accent;
+    }
+  }
+
+  &--error:focus-within {
+    &::after {
+      background-color: $error;
     }
   }
 
@@ -170,7 +180,7 @@
       width: 18px;
       height: 14px;
       background-color: #000000;
-      mask-image: url("../../img/icon-email.svg");
+      mask-image: url("../../img/icons/sprite.svg#icon-email");
 
       @media (min-width: $tablet-width) {
         right: 18px;
@@ -191,17 +201,11 @@
       width: 15px;
       height: 16px;
       background-color: #000000;
-      mask-image: url("../../img/icon-phone.svg");
+      mask-image: url("../../img/icons/sprite.svg#icon-phone");
 
       @media (min-width: $tablet-width) {
         right: 18px;
       }
-    }
-  }
-
-  &--error {
-    &::after {
-      background-color: $error;
     }
   }
 }
@@ -215,6 +219,7 @@
 }
 
 .program-form__input {
+  width: 0;
   flex-grow: 1;
   padding: 11px 20px;
 

@@ -1,21 +1,33 @@
 @use "../base/variables" as *;
 
 .copyright {
-
-}
-
-.copyright__wrapper {
-  display: flex;
-  justify-content: space-between;
-
-  @media (min-width: $tablet-width) {
-    justify-content: end;
-  }
+  padding: 20px 0;
 }
 
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
   color: $link-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    gap: 28px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__image {
+  color: #666666;
+}
+
+.copyright__link:hover .copyright__image {
+  color: $bg-color-accent;
 }

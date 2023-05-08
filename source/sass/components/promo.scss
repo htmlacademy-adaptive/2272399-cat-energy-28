@@ -1,12 +1,18 @@
 @use "../base/variables" as *;
+@use "../base/mixin" as mix;
+
 $bg-color-promo: #64a73c;
+$promo-bg-mobile: "../../img/promo-background-mobile";
+$promo-bg-desktop: "../../img/promo-background-desktop";
 
 .promo {
-  color: $font-color-accent;
+  @include mix.background($promo-bg-mobile, jpg);
+
   position: relative;
 
-  background-image: url("../../img/promo-background-phone.jpg"), linear-gradient($bg-color-promo 60%, $bg-color 60%);
-  background-repeat: no-repeat, no-repeat;
+  color: $font-color-accent;
+
+  background-repeat: no-repeat;
   background-position: 50% 0;
 
   @media (min-width: $tablet-width) {
@@ -15,11 +21,36 @@ $bg-color-promo: #64a73c;
     background: none;
   }
 
+  &::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    height: 60%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $bg-color-promo;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      z-index: -2;
+      height: 100%;
+      width: 50%;
+      left: 50%;
+      background-color: $bg-color-accent;
+      opacity: 85%;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     padding-top: 112px;
 
-
     &::before {
+      @include mix.background($promo-bg-desktop, jpg);
+
       z-index: -3;
       position: absolute;
       content: "";
@@ -29,21 +60,8 @@ $bg-color-promo: #64a73c;
       left: 50%;
       display: block;
 
-      background-image: url("../../img/promo-background.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-    }
-
-    &::after {
-      z-index: -2;
-      position: absolute;
-      content: "";
-      height: 100%;
-      width: 50%;
-      top: 0;
-      left: 50%;
-      background-color: $bg-color-accent;
-      opacity: 85%;
     }
   }
 }
@@ -56,12 +74,12 @@ $bg-color-promo: #64a73c;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    padding: 64px 206px 526px 90px;
+    padding: 64px 0 526px 90px;
     align-items: start;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 111px 600px 185px 80px;
+    padding: 111px 0 185px 80px;
   }
 }
 
@@ -100,20 +118,14 @@ $bg-color-promo: #64a73c;
 }
 
 .promo__image {
-  align-self: center;
+  display: block;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     z-index: -1;
-    width: 700px;
-    height: 609px;
     position: absolute;
     right: 0;
     bottom: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 552px;
-    height: 499px;
   }
 }
 

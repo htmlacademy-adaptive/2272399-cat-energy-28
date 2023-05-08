@@ -4,16 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
 
     <header class="main-header">
       <div class="container main-header__wrapper">
         <a href="index.html" class="main-header__logo">
-          <img class="main-header__trademark primary-trademark" src="img/primary-trademark.svg" width="44" height="44" alt="Основной фирменный знак 'Кэт энерджи'.">
-          <img class="main-header__trademark secondary-trademark" src="img/secondary-trademark.svg" width="34" height="38" alt="Фирменный знак 'Кэт энерджи' на мобильных устройствах.">
-          <img class="main-header__logo-image logo" src="img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/trademark-desktop.svg" width="71" height="60">
+            <source media="(min-width: 768px)" srcset="img/trademark-tablet.svg" width="61" height="50">
+            <img src="img/trademark-mobile.svg" width="34" height="38" alt="Фирменный знак 'Кэт энерджи'.">
+          </picture>
+          <img class="main-header__logo-image" src="img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
         </a>
         <nav class="main-header__nav main-nav main-nav--no-js">
           <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню.</span></button>
@@ -45,7 +52,13 @@
             <li class="product-list-main__item product-card-main">
               <div class="product-card-main__wrapper">
                 <a href="#" class="product-card-main__image-link">
-                  <img class="product-card-main__image" src="img/catalog-1.jpg" width="68" height="86" alt="">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-1-tablet.webp 1x, img/catalog-1-tablet@2x.webp 2x" width="161" height="172">
+                    <source type="image/webp" srcset="img/catalog-1-mobile.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 768px)" srcset="img/catalog-1-tablet.png 1x, img/catalog-1-tablet@2x.png 2x" width="161" height="172">
+                    <img class="product-card-main__image" src="img/catalog-1-mobile.jpg" srcset="img/catalog-1-mobile@2x.jpg 2x" width="68" height="86" alt="">
+                  </picture>
                 </a>
                 <h3 class="product-card-main__title heading">Cat Energy PRO 500&nbsp;г</h3>
                 <dl class="product-card-main__product-details">
@@ -71,7 +84,15 @@
             <li class="product-list-main__item product-card-main">
               <div class="product-card-main__wrapper">
                 <a href="#" class="product-card-main__image-link">
-                  <img class="product-card-main__image" src="img/catalog-2.jpg" width="84" height="100" alt="">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog-2-desktop.webp 1x, img/catalog-2-desktop@2x.webp 2x" width="172" height="196">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-2-tablet.webp 1x, img/catalog-2-tablet@2x.webp 2x" width="168" height="206">
+                    <source type="image/webp" srcset="img/catalog-2-mobile.webp 1x, img/catalog-2-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1200px)" srcset="img/catalog-2-desktop.png 1x, img/catalog-2-desktop@2x.png 2x" width="172" height="196">
+                    <source media="(min-width: 768px)" srcset="img/catalog-2-tablet.png 1x, img/catalog-2-tablet@2x.png 2x" width="168" height="206">
+                    <img class="product-card-main__image" src="img/catalog-2-mobile.jpg" srcset="img/catalog-2-mobile@2x.jpg 2x" width="84" height="100" alt="">
+                  </picture>
                 </a>
                 <h3 class="product-card-main__title heading">Cat Energy PRO 1000&nbsp;г</h3>
                 <dl class="product-card-main__product-details">
@@ -97,7 +118,13 @@
             <li class="product-list-main__item product-card-main">
               <div class="product-card-main__wrapper">
                 <a href="#" class="product-card-main__image-link">
-                  <img class="product-card-main__image" src="img/catalog-3.jpg" width="68" height="78" alt="">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-3-tablet.webp 1x, img/catalog-3-tablet@2x.webp 2x" width="163" height="174">
+                    <source type="image/webp" srcset="img/catalog-3-mobile.webp 1x, img/catalog-3-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 768px)" srcset="img/catalog-3-tablet.png 1x, img/catalog-3-tablet@2x.png 2x" width="163" height="174">
+                    <img class="product-card-main__image" src="img/catalog-3-mobile.jpg" srcset="img/catalog-3-mobile@2x.jpg 2x" width="68" height="78" alt="">
+                  </picture>
                 </a>
                 <h3 class="product-card-main__title heading">Cat Energy PRO 500&nbsp;г</h3>
                 <dl class="product-card-main__product-details">
@@ -123,7 +150,15 @@
             <li class="product-list-main__item product-card-main">
               <div class="product-card-main__wrapper">
                 <a href="#" class="product-card-main__image-link">
-                  <img class="product-card-main__image" src="img/catalog-4.jpg" width="84" height="100" alt="">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog-4-desktop.webp 1x, img/catalog-4-desktop@2x.webp 2x" width="172" height="196">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-4-tablet.webp 1x, img/catalog-4-tablet@2x.webp 2x" width="168" height="206">
+                    <source type="image/webp" srcset="img/catalog-4-mobile.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1200px)" srcset="img/catalog-4-desktop.png 1x, img/catalog-4-desktop@2x.png 2x" width="172" height="196">
+                    <source media="(min-width: 768px)" srcset="img/catalog-4-tablet.png 1x, img/catalog-4-tablet@2x.png 2x" width="168" height="206">
+                    <img class="product-card-main__image" src="img/catalog-4-mobile.jpg" srcset="img/catalog-4-mobile@2x.jpg 2x" width="84" height="100" alt="">
+                  </picture>
                 </a>
                 <h3 class="product-card-main__title heading">Cat Energy PRO 1000&nbsp;г</h3>
                 <dl class="product-card-main__product-details">
@@ -149,7 +184,13 @@
             <li class="product-list-main__item product-card-main">
               <div class="product-card-main__wrapper">
                 <a href="#" class="product-card-main__image-link">
-                  <img class="product-card-main__image" src="img/catalog-5.jpg" width="68" height="78" alt="">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-5-tablet.webp 1x, img/catalog-5-tablet@2x.webp 2x" width="163" height="174">
+                    <source type="image/webp" srcset="img/catalog-5-mobile.webp 1x, img/catalog-5-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 768px)" srcset="img/catalog-5-tablet.png 1x, img/catalog-5-tablet@2x.png 2x" width="163" height="174">
+                    <img class="product-card-main__image" src="img/catalog-5-mobile.jpg" srcset="img/catalog-5-mobile@2x.jpg 2x" width="68" height="78" alt="">
+                  </picture>
                 </a>
                 <h3 class="product-card-main__title heading">Cat Energy SLIM 500&nbsp;г</h3>
                 <dl class="product-card-main__product-details">
@@ -175,7 +216,15 @@
             <li class="product-list-main__item product-card-main">
               <div class="product-card-main__wrapper">
                 <a href="#" class="product-card-main__image-link">
-                  <img class="product-card-main__image" src="img/catalog-6.jpg" width="84" height="100" alt="">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog-6-desktop.webp 1x, img/catalog-6-desktop@2x.webp 2x" width="172" height="196">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-6-tablet.webp 1x, img/catalog-6-tablet@2x.webp 2x" width="168" height="206">
+                    <source type="image/webp" srcset="img/catalog-6-mobile.webp 1x, img/catalog-6-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1200px)" srcset="img/catalog-6-desktop.png 1x, img/catalog-6-desktop@2x.png 2x" width="172" height="196">
+                    <source media="(min-width: 768px)" srcset="img/catalog-6-tablet.png 1x, img/catalog-6-tablet@2x.png 2x" width="168" height="206">
+                    <img class="product-card-main__image" src="img/catalog-6-mobile.jpg" srcset="img/catalog-6-mobile@2x.jpg 2x" width="84" height="100" alt="">
+                  </picture>
                 </a>
                 <h3 class="product-card-main__title heading">Cat Energy SLIM 1000&nbsp;г</h3>
                 <dl class="product-card-main__product-details">
@@ -201,7 +250,13 @@
             <li class="product-list-main__item product-card-main">
               <div class="product-card-main__wrapper">
                 <a href="#" class="product-card-main__image-link">
-                  <img class="product-card-main__image" src="img/catalog-7.jpg" width="72" height="84" alt="">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-7-tablet.webp 1x, img/catalog-7-tablet@2x.webp 2x" width="163" height="174">
+                    <source type="image/webp" srcset="img/catalog-7-mobile.webp 1x, img/catalog-7-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 768px)" srcset="img/catalog-7-tablet.png 1x, img/catalog-7-tablet@2x.png 2x" width="163" height="174">
+                    <img class="product-card-main__image" src="img/catalog-7-mobile.jpg" srcset="img/catalog-7-mobile@2x.jpg 2x" width="68" height="78" alt="">
+                  </picture>
                 </a>
                 <h3 class="product-card-main__title heading">Cat Energy SLIM 500&nbsp;г</h3>
                 <dl class="product-card-main__product-details">
@@ -309,8 +364,8 @@
 
         <section class="main-footer__contacts contacts">
           <h2 class="visually-hidden">Контакты.</h2>
-          <a href="index.html" class="main-footer__logo-image logo">
-            <img src="img/logo.svg" width="101" height="18" alt="Логотип 'Кэт энерджи'.">
+          <a class="contacts__logo" href="index.html">
+            <img class="contacts__logo-image" src="img/logo.svg" width="128" height="25" alt="Логотип 'Кэт энерджи'.">
           </a>
         </section>
 
@@ -318,25 +373,31 @@
           <h2 class="visually-hidden">Социальные сети.</h2>
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте.</a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Вконтакте.</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе.</a>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Мы в Ютубе.</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме.</a>
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Мы в Телеграме.</span>
+              </a>
             </li>
           </ul>
         </section>
 
         <section class="main-footer__copyright copyright">
           <h2 class="visually-hidden">Сайт разработчика.</h2>
-          <div class="copyright__wrapper">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy.">
-            </a>
-          </div>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+            <svg class="copyright__image" width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z" fill="currentColor"/>
+            </svg>
+          </a>
         </section>
       </div>
     </footer>

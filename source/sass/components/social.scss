@@ -1,10 +1,75 @@
 @use "../base/mixin" as mix;
-
+@use "../base/variables" as *;
+$icon-color: #666666;
 // Socials section
+
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
 
 .social__list {
   @include mix.list-reset;
   display: flex;
   flex-direction: row;
+  gap: 24px;
   flex-wrap: wrap;
+}
+
+.social__item {
+  display: flex;
+  align-items: center;
+}
+
+.social__link {
+  width: 28px;
+  height: 22px;
+  position: relative;
+
+  &:hover {
+    &::after {
+      background-color: $bg-color-accent;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: $bg-color-accent;
+      opacity: 0.3;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: $icon-color;
+  }
+
+  &--vkontakte {
+    &::after {
+      width: 27px;
+      height: 17px;
+      mask-image: url("../../img/icons/sprite.svg#icon-vk");
+    }
+  }
+
+  &--youtube {
+    &::after {
+      width: 24px;
+      height: 19px;
+      mask-image: url("../../img/icons/sprite.svg#icon-youtube");
+    }
+  }
+
+  &--telegram {
+    &::after {
+      width: 19px;
+      height: 17px;
+      mask-image: url("../../img/icons/sprite.svg#icon-telegram");
+    }
+  }
 }
