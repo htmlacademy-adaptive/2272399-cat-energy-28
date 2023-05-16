@@ -15,6 +15,7 @@ $toggle-color: #000000;
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 35px;
   }
 }
 
@@ -82,10 +83,6 @@ $toggle-color: #000000;
     width: 100vw;
   }
 
-  .main-nav--closed .site-list__item {
-    display: none;
-  }
-
   .main-nav--no-js .main-nav__toggle {
     display: none;
   }
@@ -95,6 +92,14 @@ $toggle-color: #000000;
   }
 
   .main-nav--no-js .site-list__item {
+    display: block;
+  }
+}
+
+.main-nav--closed .site-list__item {
+  display: none;
+
+  @media (min-width: $tablet-width) {
     display: block;
   }
 }

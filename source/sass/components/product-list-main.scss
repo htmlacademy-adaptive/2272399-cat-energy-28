@@ -10,8 +10,7 @@ $list-desktop-width: 1440px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 140px;
+    gap: 60px;
   }
 
   @media (min-width: $between-tablet-width) {
@@ -20,7 +19,7 @@ $list-desktop-width: 1440px;
 
   @media (min-width: $list-desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 63px 80px;
+    gap: 70px 80px;
   }
 }
 

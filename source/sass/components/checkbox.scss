@@ -4,15 +4,16 @@
 .checkbox {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 13px;
+  gap: 12px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 32px 55px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    gap: 32px 80px;
   }
 }
 

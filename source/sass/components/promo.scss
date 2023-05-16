@@ -2,18 +2,20 @@
 @use "../base/mixin" as mix;
 
 $bg-color-promo: #64a73c;
-$promo-bg-mobile: "../../img/promo-background-mobile";
-$promo-bg-desktop: "../../img/promo-background-desktop";
 
 .promo {
-  @include mix.background($promo-bg-mobile, jpg);
-
   position: relative;
 
   color: $font-color-accent;
 
+  background-image: url("../../img/promo-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/promo-background-mobile@2x.jpg");
+    background-size: 320px 302px;
+  }
 
   @media (min-width: $tablet-width) {
     color: $font-color;
@@ -25,17 +27,19 @@ $promo-bg-desktop: "../../img/promo-background-desktop";
     z-index: -1;
     position: absolute;
     content: "";
-    height: 60%;
+    height: 63%;
     width: 100%;
     top: 0;
     left: 0;
+
     background-color: $bg-color-promo;
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       display: none;
     }
 
     @media (min-width: $desktop-width) {
+      display: block;
       z-index: -2;
       height: 100%;
       width: 50%;
@@ -49,8 +53,6 @@ $promo-bg-desktop: "../../img/promo-background-desktop";
     padding-top: 112px;
 
     &::before {
-      @include mix.background($promo-bg-desktop, jpg);
-
       z-index: -3;
       position: absolute;
       content: "";
@@ -60,8 +62,15 @@ $promo-bg-desktop: "../../img/promo-background-desktop";
       left: 50%;
       display: block;
 
+      background-image: url("../../img/promo-background-desktop.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::before {
+        background-image: url("../../img/promo-background-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -70,11 +79,11 @@ $promo-bg-desktop: "../../img/promo-background-desktop";
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 27px 0;
+  padding: 27px 0 0 0;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    padding: 64px 0 526px 90px;
+    padding: 50px 0 526px 90px;
     align-items: start;
   }
 
@@ -127,13 +136,18 @@ $promo-bg-desktop: "../../img/promo-background-desktop";
     right: 0;
     bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    right: 220px;
+    bottom: 50px;
+  }
 }
 
 .promo__button {
   padding: 13px 44px;
 
   @media (min-width: $tablet-width) {
-    padding: 14px 25px;
+    padding: 17px 27px;
     font-size: 20px;
     line-height: 20px;
   }

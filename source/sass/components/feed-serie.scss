@@ -8,14 +8,14 @@ $border-color-description: #d9d9d9;
   position: relative;
 
   background-color: $bg-color-secondary;
-  padding: 30px 33px 18px 20px;
+  padding: 30px 33px 22px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 77px 316px 53px 52px;
+    padding: 77px 316px 60px 52px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 77px 52px 55px;
+    padding: 77px 52px 60px;
   }
 
   &::before {
@@ -122,19 +122,19 @@ $border-color-description: #d9d9d9;
 }
 
 .feed-serie__description {
-  margin: 0 0 38px 0;
+  margin: 0 0 40px 0;
   color: $font-color-secondary;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
     color: $font-color;
-    margin: 0 0 48px 0;
+    margin: 0 0 51px 0;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 72px;
-    margin: 0 0 23px 0;
+    margin: 0 0 29px 0;
   }
 
   @media (max-width: $tablet-width) {
@@ -174,12 +174,12 @@ $border-color-description: #d9d9d9;
     background-repeat: no-repeat;
     background-size: cover;
 
-    right: -25px;
+    right: -38px;
     top: 50%;
     transform: translate(50%, -50%);
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-      right: -35px;
+      right: -40px;
     }
   }
 }

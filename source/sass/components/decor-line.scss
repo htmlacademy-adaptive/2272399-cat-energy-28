@@ -4,6 +4,13 @@
   position: relative;
 }
 
+.decor-line__container {
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 140px);
+    max-width: 100%;
+  }
+}
+
 .decor-line::after {
   position: absolute;
   content: "";
@@ -11,10 +18,11 @@
   height: 2px;
   width: 100%;
   left: 0;
-  top: 50%;
+  top: 60%;
   z-index: -1;
 
   @media (max-width: $tablet-width) {
     left: 20px;
+    width: calc(100% - 20px);
   }
 }

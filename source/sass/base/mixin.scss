@@ -3,18 +3,3 @@
   padding: 0;
   list-style-type: none;
 }
-
-@mixin background($src, $format) {
-  background-image: url("#{$src}.#{$format}");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("#{$src}@2x.#{$format}");
-  }
-
-  background-image: image-set(
-    url("#{$src}@2x.webp") type("image/webp") 2x,
-    url("#{$src}.webp") type("image/webp") 1x,
-    url("#{$src}@2x.#{$format}") type("image/#{$format}") 2x,
-    url("#{$src}.#{$format}") type("image/#{$format}") 1x,
-  );
-}
