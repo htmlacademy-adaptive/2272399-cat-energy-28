@@ -12,7 +12,7 @@
   }
 }
 
-.program-form__wrapper {
+.program-form__inner {
   @media (min-width: $desktop-width) {
     width: calc(100% - 220px);
     max-width: $desktop-width;
@@ -24,6 +24,16 @@
   }
 }
 
+.program-form__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
 .program-form__feed-wrapper {
   @media (min-width: $desktop-width) {
     width: auto;
@@ -31,22 +41,25 @@
   }
 }
 
-.program-form__cat-wrapper {
-  @media (min-width: $desktop-width) {
-    width: auto;
-    margin: 0;
-    flex-grow: 1;
-  }
-}
-
 .program-form__text {
   grid-column: 1 / -1;
   margin: 0 0 39px 0;
   text-transform: uppercase;
+  max-width: 230px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 325px;
+    margin: 0 0 66px 0;
+  }
 }
 
 .program-form__group {
-  margin: 0 0 23px 0;
+  margin: 0 0 25px 0;
   padding: 0;
 
   border: none;
@@ -58,16 +71,16 @@
   @media (min-width: $tablet-width) {
     margin: 0 0 65px 0;
 
-    &--cat-information {
+    &--cat {
       margin: 0 0 72px 0;
     }
 
-    &--feed-program {
+    &--feed {
       margin: 0 0 71px 0;
     }
 
     &--additional {
-      margin: 0 0 54px 0;
+      margin: 0 0 50px 0;
     }
   }
 
@@ -78,21 +91,15 @@
       margin: 0 0 61px 0;
     }
 
-    &--cat-information {
+    &--cat {
       display: flex;
-    }
-  }
-
-  &--feed-program {
-    @media (max-width: $tablet-width) {
-      border: 1px solid $border-color;
     }
   }
 }
 
 .program-form__input-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 14px;
 
   @media (min-width: $tablet-width) {
@@ -101,9 +108,16 @@
 
   &--owner {
     @media (min-width: $desktop-width) {
-      flex-direction: row;
-      flex-wrap: wrap;
+      grid-template-columns: repeat(4, 1fr);
       column-gap: 78px;
+    }
+  }
+
+  &--cat {
+    @media (min-width: $desktop-width) {
+      width: auto;
+      margin: 0;
+      flex-grow: 1;
     }
   }
 }
@@ -114,12 +128,20 @@
   margin: 0 0 35px 0;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 76px 0;
+    margin: 0 0 74px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 70px 0;
   }
 
   &--additional {
     @media (min-width: $tablet-width) {
-      margin: 0 0 57px 0;
+      margin: 0 0 50px 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 0 53px 0;
     }
   }
 }
@@ -153,6 +175,14 @@
 
   &--has-icon {
     gap: 10px;
+
+    @media (min-width: $tablet-width) {
+      gap: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: span 2;
+    }
   }
 
   &--has-icon:focus-within {
@@ -185,6 +215,10 @@
       @media (min-width: $tablet-width) {
         right: 18px;
       }
+
+      @media (min-width: $desktop-width) {
+        right: 20px;
+      }
     }
   }
 
@@ -206,6 +240,10 @@
       @media (min-width: $tablet-width) {
         right: 18px;
       }
+
+      @media (min-width: $desktop-width) {
+        right: 20px;
+      }
     }
   }
 }
@@ -220,6 +258,7 @@
 
 .program-form__input {
   width: 0;
+  height: 45px;
   flex-grow: 1;
   padding: 11px 20px;
 
@@ -231,6 +270,10 @@
 
   border: 1px solid $border-color;
   background-color: transparent;
+
+  &--has-icon {
+    padding: 11px 15px;
+  }
 
   &:hover {
     border-color: $border-color-secondary;
@@ -249,6 +292,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    height: 52px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -262,7 +306,7 @@
   flex-grow: 1;
   min-height: 150px;
   margin: 0;
-  padding: 10px 19px;
+  padding: 10px 10px 10px 15px;
 
   font-family: $font-secondary;
   font-size: 16px;
@@ -274,6 +318,7 @@
   resize: none;
 
   @media (min-width: $tablet-width) {
+    min-height: 175px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -298,13 +343,16 @@
 
 .program-form__button {
   margin: 0 0 21px 0;
-  padding: 13px 45px;
+  padding: 10px 45px;
+
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    padding: 16px 45px;
 
     font-size: 20px;
-    line-height: 20px;
   }
 }
 

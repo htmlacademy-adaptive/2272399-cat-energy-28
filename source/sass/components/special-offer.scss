@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 185px 55px 43px;
+  padding: 189px 55px 43px;
 
   background-image: url("../../img/special-offer.jpg");
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@
     background-position: center;
 
     @media (min-width: $tablet-width) {
-      top: 50%;
+      top: 47%;
       left: 88px;
       transform: translateY(-50%);
     }
@@ -47,7 +47,7 @@
   @media (min-width: $tablet-width) {
     min-height: 200px;
     justify-content: end;
-    padding: 71px 124px 69px 0;
+    padding: 68px 124px 69px 0;
 
     background-image: url("../../img/special-offer-tablet.jpg");
     background-position: right 60%;

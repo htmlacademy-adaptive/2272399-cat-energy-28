@@ -10,9 +10,13 @@ $border-color-sections: #d9d9d9;
   grid-template-columns: 1fr;
   padding: 20px 0;
 
-
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
+    padding: 55px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 67px 0;
   }
 }
 

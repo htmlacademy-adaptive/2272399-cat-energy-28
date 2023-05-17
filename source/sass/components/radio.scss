@@ -5,11 +5,13 @@
   padding: 22px 0 19px 0;
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 16px;
 
   @media (min-width: $tablet-width) {
-    border: 1px solid $border-color;
     padding: 25px 0 25px 28px;
+    gap: 13px;
+
+    border: 1px solid $border-color;
   }
 }
 
@@ -23,6 +25,8 @@
 }
 
 .radio__text {
+  margin: 0 0 0 45px;
+
   font-family: $font-secondary;
   font-style: normal;
   font-weight: 400;
@@ -30,14 +34,14 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $font-color-secondary-special;
-  margin: 0 0 0 45px;
 
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 0 60px;
+
     font-size: 20px;
     line-height: 30px;
-    margin: 0 0 0 60px;
   }
 }
 
@@ -47,6 +51,7 @@
   height: 30px;
   top: -2px;
   left: 0;
+
   cursor: pointer;
 
   border: 1px solid $border-color-secondary;
