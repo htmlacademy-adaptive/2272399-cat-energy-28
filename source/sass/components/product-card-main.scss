@@ -1,22 +1,40 @@
 @use "../base/variables" as *;
+
 $plus-icon-color: #d3d3d3;
+$bg-color-white: $basic-white;
+$bg-color: $basic-grey;
+$border-color: $basic-grey;
+$font-color-title: $special-dark-grey-2;
+$font-color-product-details: $special-dark-grey;
+$underline-color: $special-grey;
+$font-color-link-more: $special-dark-grey;
+$bg-color-link-more: $basic-grey;
+$bg-color-link-more-hover: #ebebeb;
+$bg-color-link-more-active: #ebebeb;
+$font-color-link-more-active: $special-dark-grey-transparent;
+
+// Карточка основного товара
 
 .product-card-main {
-  background-image: none;
   padding: 20px 0;
-  border: 1px solid $border-color-third;
   min-height: 209px;
+
+  background-image: none;
+  border: 1px solid $border-color-third;
 
   @media (min-width: $tablet-width) {
     padding: 0 36px 39px;
-    background-image: linear-gradient($bg-color 16%, $bg-color-extra 16%);
+
     line-height: 14px;
+
+    background-image: linear-gradient($bg-color-white 16%, $bg-color 16%);
     border: none;
   }
 
   &--more {
-    background-image: none;
     display: flex;
+
+    background-image: none;
 
     @media (min-width: $tablet-width) {
       padding: 82px 0 0 0;
@@ -32,11 +50,11 @@ $plus-icon-color: #d3d3d3;
   grid-template-rows: 1fr 1fr min-content;
 
   @media (min-width: $tablet-width) {
+    position: relative;
     width: 100%;
     margin: 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    position: relative;
   }
 
   &--more {
@@ -54,6 +72,7 @@ $plus-icon-color: #d3d3d3;
       top: 14px;
       left: 50%;
       transform: translateX(-50%);
+
       background-color: $plus-icon-color;
     }
 
@@ -65,13 +84,15 @@ $plus-icon-color: #d3d3d3;
       top: 14px;
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
+
       background-color: $plus-icon-color;
     }
 
     @media (min-width: $tablet-width) {
       padding: 155px 38px 38px;
-      border: 2px solid $bg-color-extra;
       flex-grow: 1;
+
+      border: 2px solid $border-color;
 
       &::before {
         width: 60px;
@@ -89,7 +110,6 @@ $plus-icon-color: #d3d3d3;
 .product-card-main__image-link {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-
   display: flex;
   justify-content: center;
   align-items: end;
@@ -107,19 +127,44 @@ $plus-icon-color: #d3d3d3;
   }
 }
 
-.product-card-main__title {
+.product-card-main__image-link:hover + .product-card-main__title-link {
+  opacity: 0.6;
+}
+
+.product-card-main__image-link:active + .product-card-main__title-link {
+  opacity: 0.3;
+}
+
+.product-card-main__title-link {
   margin: 0 0 18px 0;
+  display: flex;
+
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    margin: 0 0 21px 0;
+  }
+}
+
+.product-card-main__title {
+  margin: 0;
   width: 55%;
 
   font-size: 16px;
   line-height: 20px;
-  color: $font-color-secondary-special;
+  color: $font-color-title;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    justify-self: center;
-    margin: 0 0 21px 0;
-
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -127,6 +172,7 @@ $plus-icon-color: #d3d3d3;
 
   @media (min-width: $desktop-width) {
     width: 90%;
+
     line-height: 21px;
   }
 
@@ -138,6 +184,7 @@ $plus-icon-color: #d3d3d3;
     text-align: center;
 
     @media (min-width: $tablet-width) {
+      width: 70%;
       margin: 0 0 23px 0;
     }
   }
@@ -147,8 +194,9 @@ $plus-icon-color: #d3d3d3;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  color: $font-color-secondary;
   align-content: start;
+
+  color: $font-color-product-details;
 
   @media (min-width: $tablet-width) {
     row-gap: 16px;
@@ -169,7 +217,8 @@ $plus-icon-color: #d3d3d3;
       left: 0;
       width: 100%;
       height: 1px;
-      background-color: $border-color-secondary;
+
+      background-color: $underline-color;
     }
   }
 }
@@ -198,6 +247,7 @@ $plus-icon-color: #d3d3d3;
   &--more {
     @media (min-width: $tablet-width) {
       width: 70%;
+
       line-height: 18px;
       text-align: center;
     }
@@ -223,20 +273,21 @@ $plus-icon-color: #d3d3d3;
   &--more {
     margin: 21px 0 0 0;
     align-self: stretch;
-    color: $font-color-secondary;
-    background-color: $bg-color-extra;
+
+    color: $font-color-link-more;
+    background-color: $bg-color-link-more;
 
     @media (min-width: $tablet-width) {
-      margin: auto 0 0 0;
+      margin: 87px 0 0 0;
     }
 
     &:hover {
-      background-color: $border-color-third;
+      background-color: $bg-color-link-more-hover;
     }
 
     &:active {
-      background-color: $border-color-third;
-      color: $font-color-secondary-active;
+      background-color: $bg-color-link-more-active;
+      color: $font-color-link-more-active;
     }
   }
 }

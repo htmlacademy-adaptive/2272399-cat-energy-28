@@ -1,6 +1,8 @@
 @use "../base/variables" as *;
 @use "../base/mixin" as mix;
 
+$bg-color: $basic-white;
+
 // Раздел "Дополнительные товары"
 
 .additional-products__title {

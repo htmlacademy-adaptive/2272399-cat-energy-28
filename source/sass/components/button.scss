@@ -1,5 +1,12 @@
 @use "../base/variables" as *;
 
+$font-color: $basic-white;
+$font-color-active: $basic-white-transparent;
+$button-color: $accent-color;
+$button-color-hover: $accent-color-2;
+
+// Кнопки
+
 .button {
   font-family: $font-secondary;
   font-style: normal;
@@ -9,7 +16,7 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: $font-color-accent;
+  color: $font-color;
 
   border: none;
   background-color: $button-color;
@@ -20,6 +27,6 @@
   }
 
   &:active {
-    color: $font-color-accent-pressed;
+    color: $font-color-active;
   }
 }

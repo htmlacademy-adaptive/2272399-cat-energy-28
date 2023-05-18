@@ -1,5 +1,8 @@
 @use "../base/variables" as *;
-$border-color-sections: #d9d9d9;
+
+$border-color-sections: $basic-grey-3;
+
+// Футер
 
 .main-footer {
   background-color: $bg-color-extra;
@@ -33,8 +36,6 @@ $border-color-sections: #d9d9d9;
 }
 
 .main-footer__copyright {
-  display: flex;
-
   @media (min-width: $tablet-width) {
     justify-self: end;
   }

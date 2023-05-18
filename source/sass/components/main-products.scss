@@ -1,6 +1,8 @@
 @use "../base/variables" as *;
 @use "../base/mixin" as mix;
 
+// Каталог главных продуктов
+
 .main-products__inner {
   @media (min-width: $tablet-width) {
     margin: 0 auto;

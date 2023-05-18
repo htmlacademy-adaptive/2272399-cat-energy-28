@@ -1,11 +1,14 @@
 @use "../base/mixin" as mix;
 @use "../base/variables" as *;
-$icon-color: #666666;
-// Socials section
+
+$icon-color: $special-grey-2;
+$icon-color-hover: $accent-color;
+$icon-color-active: $accent-color;
+
+// Социальные сети
 
 .social {
   display: flex;
-  justify-content: center;
   padding: 20px 0;
 
   @media (min-width: $tablet-width) {
@@ -16,9 +19,10 @@ $icon-color: #666666;
 .social__list {
   @include mix.list-reset;
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  flex-grow: 1;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 24px;
 }
 
 .social__item {
@@ -33,13 +37,13 @@ $icon-color: #666666;
 
   &:hover {
     &::after {
-      background-color: $bg-color-accent;
+      background-color: $icon-color-hover;
     }
   }
 
   &:active {
     &::after {
-      background-color: $bg-color-accent;
+      background-color: $icon-color-active;
       opacity: 0.3;
     }
   }
@@ -50,6 +54,7 @@ $icon-color: #666666;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+
     background-color: $icon-color;
   }
 
