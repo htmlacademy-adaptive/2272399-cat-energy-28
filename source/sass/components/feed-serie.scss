@@ -1,14 +1,20 @@
 @use "../base/variables" as *;
-$border-color-description: #d9d9d9;
 
+$bg-color: $basic-grey;
+$bg-color-circle: $accent-color;
+$line-color: $basic-grey-3;
+$font-color-mobile: $special-dark-grey;
+$font-color: $basic-black;
+
+// Разделы с каталогами на главной странице
 
 .feed-serie {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-
-  background-color: $bg-color-secondary;
   padding: 30px 33px 22px 20px;
+
+  background-color: $bg-color;
 
   @media (min-width: $tablet-width) {
     padding: 77px 316px 60px 52px;
@@ -26,7 +32,7 @@ $border-color-description: #d9d9d9;
     top: 24px;
     left: 22px;
 
-    background-color: $bg-color-accent;
+    background-color: $bg-color-circle;
     border-radius: 50%;
 
     @media (min-width: $tablet-width) {
@@ -123,7 +129,7 @@ $border-color-description: #d9d9d9;
 
 .feed-serie__description {
   margin: 0 0 40px 0;
-  color: $font-color-secondary;
+  color: $font-color-mobile;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -147,15 +153,15 @@ $border-color-description: #d9d9d9;
       height: 1px;
       left: 0;
       bottom: -23px;
-      background-color: $border-color-description;
+      background-color: $line-color;
     }
   }
 }
 
 .feed-serie__link {
+  position: relative;
   align-self: start;
   margin-top: auto;
-  position: relative;
 
   font-size: 16px;
   line-height: 16px;
@@ -170,16 +176,26 @@ $border-color-description: #d9d9d9;
     content: "";
     width: 24px;
     height: 12px;
-    background-image: url("../../img/icons/sprite.svg#arrow-icon");
-    background-repeat: no-repeat;
-    background-size: cover;
-
     right: -38px;
     top: 50%;
     transform: translate(50%, -50%);
 
+    background-image: url("../../img/icons/sprite.svg#arrow-icon");
+    background-repeat: no-repeat;
+    background-size: cover;
+
     @media (min-width: $tablet-width) and (max-width: $desktop-width) {
       right: -40px;
+    }
+  }
+
+  &:hover::after {
+    background-image: url("../../img/icons/sprite.svg#arrow-icon-hover");
+    width: 32px;
+    right: -42px;
+
+    @media (min-width: $tablet-width) {
+      right: -44px;
     }
   }
 }

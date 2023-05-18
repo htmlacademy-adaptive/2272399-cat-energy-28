@@ -1,6 +1,14 @@
 @use "../base/variables" as *;
 
+$font-color: $special-dark-grey;
+$image-color: $special-grey-2;
+$image-color-hover: $accent-color;
+
+// Раздел с логотипом Академии
+
 .copyright {
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px 0;
 
   @media (min-width: $tablet-width) {
@@ -17,9 +25,10 @@
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
-  color: $link-color-secondary;
+  color: $font-color;
 
   @media (min-width: $tablet-width) {
+    justify-content: end;
     gap: 28px;
   }
 
@@ -29,9 +38,9 @@
 }
 
 .copyright__image {
-  color: #666666;
+  color: $image-color;
 }
 
 .copyright__link:hover .copyright__image {
-  color: $bg-color-accent;
+  color: $image-color-hover;
 }

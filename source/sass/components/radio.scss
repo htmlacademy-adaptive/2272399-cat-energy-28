@@ -1,6 +1,13 @@
 @use "../base/variables" as *;
 @use "../base/mixin.scss" as mix;
 
+$border-color-radio: $special-grey-4;
+$font-color-text: $special-dark-grey-2;
+$border-color-mark: $special-grey;
+$color-circle: $accent-color;
+$border-color-mark-focus: $special-dark-grey;
+$border-color-mark-hover: $special-grey-3;
+
 .radio {
   padding: 22px 0 19px 0;
   display: flex;
@@ -11,7 +18,7 @@
     padding: 25px 0 25px 28px;
     gap: 13px;
 
-    border: 1px solid $border-color;
+    border: 1px solid $border-color-radio;
   }
 }
 
@@ -33,7 +40,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: $font-color-secondary-special;
+  color: $font-color-text;
 
   cursor: pointer;
 
@@ -54,7 +61,7 @@
 
   cursor: pointer;
 
-  border: 1px solid $border-color-secondary;
+  border: 1px solid $border-color-mark;
   border-radius: 50%;
 
   @media (min-width: $tablet-width) {
@@ -73,7 +80,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: $bg-color-accent;
+  background-color: $color-circle;
   border-radius: 50%;
 
   @media (min-width: $tablet-width) {
@@ -82,8 +89,18 @@
   }
 }
 
+.radio__input:focus + .radio__mark {
+  outline: none;
+  border: 1px solid $border-color-mark-focus;
+}
+
 .radio__input:hover + .radio__mark {
-  border-color: $border-color-secondary-hover;
+  border-color: $border-color-mark-hover;
+}
+
+.radio__input:active + .radio__mark,
+.radio__input:active ~ .radio__text {
+  opacity: 0.3;
 }
 
 .radio__input:disabled + .radio__mark,

@@ -1,5 +1,10 @@
 @use "../base/variables" as *;
 
+$bg-color: $accent-color;
+$font-color: $basic-white;
+
+// Раздел специального предложения
+
 .special-offer {
   position: relative;
   display: flex;
@@ -10,7 +15,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: $bg-color-accent;
+  background-color: $bg-color;
 
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -22,6 +27,7 @@
     top: 65px;
     left: 50%;
     transform: translateX(-50%);
+
     background-image: url("../../img/icons/sprite.svg#icon-gift");
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,7 +85,7 @@
 
   font-size: 16px;
   line-height: 20px;
-  color: $font-color-accent;
+  color: $font-color;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     text-align: start;
