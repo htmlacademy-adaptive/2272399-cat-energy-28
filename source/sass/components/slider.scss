@@ -1,5 +1,11 @@
 @use "../base/variables" as *;
 
+$toggle-color: $special-grey-2;
+$toggle-bg-color: $basic-white;
+$toggle-color-hover: $accent-color;
+
+// Слайдер
+
 .slider {
   position: relative;
   display: flex;
@@ -13,9 +19,11 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  padding: 0;
 
-  background-color: #666666;
-  border-radius: 2px;
+  background-color: $toggle-color;
+  border: none;
+  border-radius: 5px;
 
   cursor: pointer;
 
@@ -28,8 +36,8 @@
     left: -18px;
     transform: translateY(-50%);
 
-    border: 2px solid #666666;
-    background-color: #ffffff;
+    border: 2px solid $toggle-color;
+    background-color: $toggle-bg-color;
     border-radius: 50%;
   }
 
@@ -42,19 +50,21 @@
     left: -10px;
     transform: translateY(-50%);
 
-    background-color: #666666;
+    background-color: $toggle-color;
     mask-image: url("../../img/icons/sprite.svg#icon-slider-toggle");
   }
 
+  &:focus,
   &:hover {
-    background-color: $bg-color-accent;
+    outline: none;
+    background-color: $toggle-color-hover;
 
     &::before {
-      border-color: $bg-color-accent;
+      border-color: $toggle-color-hover;
     }
 
     &::after {
-      background-color: $bg-color-accent;
+      background-color: $toggle-color-hover;
     }
   }
 

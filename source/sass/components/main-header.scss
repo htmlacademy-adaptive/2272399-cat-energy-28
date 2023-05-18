@@ -1,14 +1,19 @@
 @use "../base/variables" as *;
 
+$bg-color: $basic-white;
+
+// Хэдер
+
 .main-header {
   background-color: $bg-color;
 
   @media (min-width: $desktop-width) {
     z-index: 1;
-    background-color: transparent;
     position: absolute;
     width: 100%;
     top: 53px;
+
+    background-color: transparent;
   }
 }
 
@@ -17,7 +22,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -35,9 +39,7 @@
   width: calc(100% - 40px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 33px 1fr 33px;
-  align-items: center;
-  justify-items: center;
+  grid-template-columns: 1fr;
   padding: 12px 0 16.5px;
   height: 65px;
 
@@ -57,20 +59,8 @@
   }
 }
 
-.main-header__logo-image {
-  @media (min-width: $tablet-width) {
-    margin-left: 12px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 117px;
-    height: 21px;
-  }
-}
-
 .main-header__nav {
   @media (min-width: $tablet-width) {
     margin-left: auto;
-    max-width: 80%;
   }
 }

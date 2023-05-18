@@ -1,10 +1,20 @@
 @use "../base/variables" as *;
-$toggle-color: #000000;
+$toggle-color: $basic-black;
+
+// Навигация
 
 .main-nav {
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: end;
+    max-width: 70%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 80%;
+
+    &--cat-theme {
+      max-width: 49%;
+    }
   }
 }
 
@@ -14,6 +24,7 @@ $toggle-color: #000000;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    justify-content: end;
     flex-wrap: wrap;
     gap: 35px;
   }
@@ -46,6 +57,7 @@ $toggle-color: #000000;
   transform: translateX(-50%);
   width: 24px;
   height: 1.5px;
+
   background-color: $toggle-color;
   box-shadow: 0 8px 0 0 $toggle-color, 0 16px 0 0 $toggle-color;
 }

@@ -1,14 +1,23 @@
 @use "../base/variables" as *;
 
+// Карта
+
 .map {
+  position: relative;
   display: flex;
 }
 
 .map__image {
-  width: 100%;
+  width: 100vw;
   height: 362px;
 
   @media (min-width: $tablet-width) {
     height: 400px;
+  }
+
+  &--noscript {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

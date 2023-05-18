@@ -1,6 +1,22 @@
 @use "../base/variables" as *;
 @use "../base/mixin.scss" as mix;
 
+$bg-color-group-title: $basic-white;
+$icon-color: $basic-black;
+$icon-color-focus: $accent-color;
+$icon-color-error: $basic-red;
+$font-color-label: $special-dark-grey;
+$font-color-input: $special-dark-grey;
+$border-color-input: $special-grey-4;
+$border-color-input-hover: $special-grey;
+$border-color-input-focus: $special-dark-grey;
+$font-color-textarea: $special-dark-grey;
+$border-color-textarea: $special-grey-4;
+$border-color-textarea-hover: $special-grey;
+$border-color-group-feed: $basic-grey-3;
+
+// Форма подбора программы
+
 .program-form {
   font-family: $font-secondary;
   font-size: 16px;
@@ -17,7 +33,6 @@
     width: calc(100% - 220px);
     max-width: $desktop-width;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
@@ -44,11 +59,11 @@
 .program-form__text {
   grid-column: 1 / -1;
   margin: 0 0 39px 0;
-  text-transform: uppercase;
   max-width: 230px;
 
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -68,6 +83,12 @@
     margin: 0 0 34px 0;
   }
 
+  &--feed {
+    border: 1px solid $border-color-group-feed;
+    border-left: none;
+    border-right: none;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0 0 65px 0;
 
@@ -77,6 +98,7 @@
 
     &--feed {
       margin: 0 0 71px 0;
+      border: none;
     }
 
     &--additional {
@@ -89,10 +111,6 @@
 
     &--additional {
       margin: 0 0 61px 0;
-    }
-
-    &--cat {
-      display: flex;
     }
   }
 }
@@ -117,7 +135,6 @@
     @media (min-width: $desktop-width) {
       width: auto;
       margin: 0;
-      flex-grow: 1;
     }
   }
 }
@@ -153,7 +170,7 @@
   font-size: 24px;
   line-height: 26px;
 
-  background-color: $bg-color;
+  background-color: $bg-color-group-title;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -187,13 +204,13 @@
 
   &--has-icon:focus-within {
     &::after {
-      background-color: $bg-color-accent;
+      background-color: $icon-color-focus;
     }
   }
 
   &--error:focus-within {
     &::after {
-      background-color: $error;
+      background-color: $icon-color-error;
     }
   }
 
@@ -209,7 +226,8 @@
       transform: translateY(-50%);
       width: 18px;
       height: 14px;
-      background-color: #000000;
+
+      background-color: $icon-color;
       mask-image: url("../../img/icons/sprite.svg#icon-email");
 
       @media (min-width: $tablet-width) {
@@ -234,7 +252,8 @@
       transform: translateY(-50%);
       width: 15px;
       height: 16px;
-      background-color: #000000;
+
+      background-color: $icon-color;
       mask-image: url("../../img/icons/sprite.svg#icon-phone");
 
       @media (min-width: $tablet-width) {
@@ -253,7 +272,7 @@
   align-items: center;
 
   text-transform: uppercase;
-  color: $font-color-secondary;
+  color: $font-color-label;
 }
 
 .program-form__input {
@@ -266,9 +285,9 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: $font-color-secondary;
+  color: $font-color-input;
 
-  border: 1px solid $border-color;
+  border: 1px solid $border-color-input;
   background-color: transparent;
 
   &--has-icon {
@@ -276,11 +295,11 @@
   }
 
   &:hover {
-    border-color: $border-color-secondary;
+    border-color: $border-color-input-hover;
   }
 
   &:focus {
-    outline: 2px solid $border-color-focus;
+    outline: 2px solid $border-color-input-focus;
   }
 
   &[type="tel"]:invalid:not(:placeholder-shown) {
@@ -293,6 +312,7 @@
 
   @media (min-width: $tablet-width) {
     height: 52px;
+
     font-size: 20px;
     line-height: 30px;
   }
@@ -312,10 +332,14 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: $font-color-secondary;
+  color: $font-color-textarea;
 
-  border: 1px solid $border-color;
+  border: 1px solid $border-color-textarea;
   resize: none;
+
+  &:hover {
+    border-color: $border-color-textarea-hover;
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 175px;
@@ -331,7 +355,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 64px;
+    gap: 10px 64px;
     margin: 0 0 72px 0;
   }
 
@@ -349,6 +373,7 @@
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
     margin: 0;
     padding: 16px 45px;
 

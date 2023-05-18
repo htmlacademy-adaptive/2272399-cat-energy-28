@@ -1,6 +1,13 @@
 @use "../base/variables" as *;
 @use "../base/mixin.scss" as mix;
 
+$line-color: $special-grey-4;
+$number-color: $basic-grey;
+$bg-color-icon: $accent-color;
+$font-color: $special-dark-grey;
+
+// Раздел "Как это работает"
+
 .guide {
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     position: relative;
@@ -12,7 +19,8 @@
       height: 1px;
       bottom: -47px;
       left: 0;
-      background-color: $border-color;
+
+      background-color: $line-color;
     }
   }
 }
@@ -62,14 +70,15 @@
     min-height: 280px;
 
     &::after {
-      z-index: -1;
       position: absolute;
-      font-family: $font-secondary;
-      color: $bg-color-extra;
-      font-size: 280px;
-      line-height: 280px;
+      z-index: -1;
       top: 0;
       left: 118px;
+
+      font-family: $font-secondary;
+      color: $number-color;
+      font-size: 280px;
+      line-height: 280px;
 
       @media (min-width: $desktop-width) {
         left: 113px;
@@ -89,7 +98,7 @@
     top: 0;
     left: 0;
 
-    background-color: $bg-color-accent;
+    background-color: $bg-color-icon;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px 30px;
@@ -153,7 +162,7 @@
 
 .guide__list-text {
   margin: 0;
-  color: $font-color-secondary;
+  color: $font-color;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

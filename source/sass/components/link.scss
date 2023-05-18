@@ -1,11 +1,15 @@
 @use "../base/variables" as *;
 
+$font-color: $basic-black;
+
+// Ссылки
+
 .link {
   font-family: $font-secondary;
   font-style: normal;
   text-decoration: none;
   text-transform: uppercase;
-  color: $link-color;
+  color: $font-color;
 
   &:active {
     opacity: 0.3;

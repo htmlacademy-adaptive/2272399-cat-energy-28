@@ -1,20 +1,17 @@
 @use "../base/variables.scss" as *;
 
+$line-color: $accent-color;
+
+// Декоративная линия
+
 .decor-line {
   position: relative;
-}
-
-.decor-line__container {
-  @media (min-width: $desktop-width) {
-    width: calc(100% - 140px);
-    max-width: 100%;
-  }
 }
 
 .decor-line::after {
   position: absolute;
   content: "";
-  background-color: $bg-color-accent;
+  background-color: $line-color;
   height: 2px;
   width: 100%;
   left: 0;
@@ -24,5 +21,12 @@
   @media (max-width: $tablet-width) {
     left: 20px;
     width: calc(100% - 20px);
+  }
+}
+
+.decor-line__inner {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    left: -50px;
   }
 }

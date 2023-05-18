@@ -1,6 +1,13 @@
 @use "../base/variables" as *;
 @use "../base/mixin.scss" as mix;
 
+$font-color: $basic-black;
+$border-color: $special-grey;
+$border-color-focus: $special-dark-grey;
+$border-color-hover: $special-grey-3;
+
+// Чекбоксы
+
 .checkbox {
   display: grid;
   grid-template-columns: 1fr;
@@ -27,6 +34,9 @@
 }
 
 .checkbox__text {
+  display: block;
+  margin: 0 0 0 45px;
+
   font-family: $font-secondary;
   font-style: normal;
   font-weight: 400;
@@ -34,7 +44,6 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $font-color;
-  margin: 0 0 0 45px;
 
   cursor: pointer;
 
@@ -52,7 +61,7 @@
   top: 0;
   left: 0;
 
-  border: 1px solid $border-color-secondary;
+  border: 1px solid $border-color;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
@@ -80,8 +89,18 @@
   }
 }
 
+.checkbox__input:focus + .checkbox__mark {
+  outline: none;
+  border: 1px solid $border-color-focus;
+}
+
 .checkbox__input:hover + .checkbox__mark {
-  border-color: $border-color-secondary-hover;
+  border-color: $border-color-hover;
+}
+
+.checkbox__input:active + .checkbox__mark,
+.checkbox__input:active ~ .checkbox__text {
+  opacity: 0.3;
 }
 
 .checkbox__input:disabled + .checkbox__mark,

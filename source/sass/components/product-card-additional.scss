@@ -1,5 +1,11 @@
 @use "../base/variables.scss" as *;
 
+// Карточка дополнительного товара
+
+$border-color-card: $special-grey;
+$font-color-title: $special-dark-grey-2;
+$font-color-product-details: $special-dark-grey;
+
 .product-card-additional {
   display: grid;
   grid-template-columns: 1fr;
@@ -7,7 +13,7 @@
   padding: 13px 0 19px 0;
   align-items: center;
 
-  border: 1px solid $border-color-secondary;
+  border: 1px solid $border-color-card;
   border-left: none;
   border-right: none;
 
@@ -18,7 +24,7 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    border: 1px solid $border-color-secondary;
+    border: 1px solid $border-color-card;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,12 +34,24 @@
   }
 }
 
+.product-card-additional__title-link {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .product-card-additional__title {
   margin: 0;
 
   font-size: 16px;
   line-height: 16px;
-  color: $font-color-secondary-special;
+  color: $font-color-title;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -49,7 +67,7 @@
 
   font-size: 14px;
   line-height: 14px;
-  color: $font-color-secondary;
+  color: $font-color-product-details;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -68,8 +86,9 @@
 }
 
 .product-card-additional__description {
-  text-align: end;
   margin: 0;
+
+  text-align: end;
 
   @media (min-width: $tablet-width) {
     min-width: 42px;
@@ -83,9 +102,10 @@
 }
 
 .product-card-additional__link {
+  padding: 10px 85px;
+
   font-size: 16px;
   line-height: 20px;
-  padding: 10px 85px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     grid-column: 1 / -1;

@@ -1,7 +1,13 @@
 @use "../base/variables" as *;
 @use "../base/mixin.scss" as mix;
 
-// Site navigation
+$bg-color: $basic-white;
+$border-color: #e6e6e6;
+$underline-color: $accent-color;
+$underline-color-cat: $basic-white;
+$font-color-cat: $basic-white;
+
+// Список ссылок в навигации
 
 .site-list {
   @include mix.list-reset;
@@ -9,6 +15,7 @@
 
 .site-list__item {
   padding: 22px 60px 24px;
+
   text-align: center;
 
   border: 1px solid $border-color;
@@ -16,6 +23,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 18px 0 12px;
+
     border: none;
     background-color: transparent;
   }
@@ -30,19 +38,21 @@
       height: 2px;
       bottom: -6px;
       left: 0;
-      background-color: $bg-color-accent;
+
+      background-color: $underline-color;
     }
   }
 
   @media (min-width: $desktop-width) {
     &--cat-theme::after {
-      background-color: $bg-color;
+      background-color: $underline-color-cat;
     }
   }
 }
 
 .site-list__link {
   position: relative;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -60,7 +70,7 @@
 
   &--cat-theme {
     @media (min-width: $desktop-width) {
-      color: $font-color-accent;
+      color: $font-color-cat;
     }
   }
 
