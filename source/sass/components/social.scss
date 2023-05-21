@@ -62,7 +62,7 @@ $icon-color-active: $accent-color;
     &::after {
       width: 27px;
       height: 17px;
-      mask-image: url("../../img/icons/sprite.svg#icon-vk");
+      mask-image: url("../img/icons/sprite.svg#icon-vk");
     }
   }
 
@@ -70,7 +70,7 @@ $icon-color-active: $accent-color;
     &::after {
       width: 24px;
       height: 19px;
-      mask-image: url("../../img/icons/sprite.svg#icon-youtube");
+      mask-image: url("../img/icons/sprite.svg#icon-youtube");
     }
   }
 
@@ -78,7 +78,7 @@ $icon-color-active: $accent-color;
     &::after {
       width: 19px;
       height: 17px;
-      mask-image: url("../../img/icons/sprite.svg#icon-telegram");
+      mask-image: url("../img/icons/sprite.svg#icon-telegram");
     }
   }
 }

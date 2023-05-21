@@ -15,7 +15,7 @@ $border-color-sections: $basic-grey-3;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
-    padding: 55px 0;
+    padding: 60px 0 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,14 +24,18 @@ $border-color-sections: $basic-grey-3;
 }
 
 .main-footer__contacts {
-  @media (max-width: $tablet-width) {
-    border-bottom: 1px solid $border-color-sections;
+  border-bottom: 1px solid $border-color-sections;
+
+  @media (min-width: $tablet-width) {
+    border: none;
   }
 }
 
 .main-footer__social {
-  @media (max-width: $tablet-width) {
-    border-bottom: 1px solid $border-color-sections;
+  border-bottom: 1px solid $border-color-sections;
+
+  @media (min-width: $tablet-width) {
+    border: none;
   }
 }
 

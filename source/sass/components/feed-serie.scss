@@ -55,7 +55,7 @@ $font-color: $basic-black;
   &--slim::after {
     position: absolute;
     content: "";
-    background-image: url("../../img/icons/sprite.svg#cat-slim");
+    background-image: url("../img/icons/sprite.svg#cat-slim");
     background-repeat: no-repeat;
     background-size: cover;
     width: 36px;
@@ -83,7 +83,7 @@ $font-color: $basic-black;
   &--pro::after {
     position: absolute;
     content: "";
-    background-image: url("../../img/icons/sprite.svg#cat-pro");
+    background-image: url("../img/icons/sprite.svg#cat-pro");
     background-repeat: no-repeat;
     background-size: cover;
     width: 67px;
@@ -176,26 +176,34 @@ $font-color: $basic-black;
     content: "";
     width: 24px;
     height: 12px;
-    right: -38px;
+    right: -28px;
     top: 50%;
     transform: translate(50%, -50%);
 
-    background-image: url("../../img/icons/sprite.svg#arrow-icon");
+    background-image: url("../img/icons/sprite.svg#arrow-icon");
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       right: -40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -38px;
     }
   }
 
   &:hover::after {
-    background-image: url("../../img/icons/sprite.svg#arrow-icon-hover");
+    background-image: url("../img/icons/sprite.svg#arrow-icon-hover");
     width: 32px;
-    right: -42px;
+    right: -32px;
 
     @media (min-width: $tablet-width) {
       right: -44px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -42px;
     }
   }
 }
