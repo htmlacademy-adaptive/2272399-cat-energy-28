@@ -21,7 +21,7 @@ $list-desktop-width: 1440px;
 
   @media (min-width: $list-desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 70px 80px;
+    gap: 67px 80px;
   }
 }
 

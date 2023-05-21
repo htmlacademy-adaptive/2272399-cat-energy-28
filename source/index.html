@@ -9,6 +9,12 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="/fonts/lato/Lato-Regular.woff" as="font">
+    <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" as="font">
+    <link rel="preload" href="/fonts/oswald/oswaldmedium.woff" as="font">
+    <link rel="preload" href="/fonts/oswald/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="/fonts/oswald/oswaldregular.woff" as="font">
+    <link rel="preload" href="/fonts/oswald/oswaldregular.woff2" as="font">
   </head>
   <body class="page__body">
 
@@ -95,7 +101,7 @@
       <section class="example-cat">
         <div class="example-cat__container container">
           <h2 class="example-cat__title heading">Живой пример</h2>
-          <p class="example-cat__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <p class="example-cat__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <dl class="example-cat__description-list">
             <div class="example-cat__description-item">
               <dt class="example-cat__description-termin">Снижение веса</dt>
@@ -108,7 +114,7 @@
           </dl>
           <span class="example-cat__costs-caption">Затраты на питание:<span class="example-cat__line-break"></span> 15 000 руб.</span>
           <figure class="example-cat__image-wrapper slider">
-            <button class="slider__toggle" type="button"></button>
+            <button class="slider__toggle" type="button"><span class="visually-hidden">Ползунок слайдера.</span></button>
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-slide-tablet.webp 1x, img/cat-slide-tablet@2x.webp 2x" width="560" height="512">
               <source type="image/webp" srcset="img/cat-slide-mobile.webp 1x, img/cat-slide-mobile@2x.webp 2x">
@@ -124,7 +130,7 @@
       <section class="address">
         <div class="container">
           <div class="address__wrapper">
-            <h2 class="address__title heading">Приглашаем<br>к сотрудничеству дилеров!</h2>
+            <h2 class="address__title heading">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             <p class="address__text">ул.&nbsp;Большая<br> Конюшенная, д.&nbsp;19/8 <span class="address__text-line-break">Санкт-Петербург</span></p>
           </div>
         </div>
@@ -178,12 +184,7 @@
 
         <section class="main-footer__copyright copyright">
           <h2 class="visually-hidden">Сайт разработчика.</h2>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            HTML Academy
-            <svg class="copyright__image" width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z" fill="currentColor"/>
-            </svg>
-          </a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </section>
       </div>
     </footer>

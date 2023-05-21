@@ -51,7 +51,7 @@ $toggle-color-hover: $accent-color;
     transform: translateY(-50%);
 
     background-color: $toggle-color;
-    mask-image: url("../../img/icons/sprite.svg#icon-slider-toggle");
+    mask-image: url("../img/icons/sprite.svg#icon-slider-toggle");
   }
 
   &:focus,

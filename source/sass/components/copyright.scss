@@ -1,15 +1,15 @@
 @use "../base/variables" as *;
 
 $font-color: $special-dark-grey;
-$image-color: $special-grey-2;
-$image-color-hover: $accent-color;
+$icon-color: $special-grey-2;
+$icon-color-hover: $accent-color;
 
 // Раздел с логотипом Академии
 
 .copyright {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 0;
+  padding: 24px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -17,8 +17,8 @@ $image-color-hover: $accent-color;
 }
 
 .copyright__link {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-grow: 1;
 
@@ -27,20 +27,36 @@ $image-color-hover: $accent-color;
   text-decoration: none;
   color: $font-color;
 
-  @media (min-width: $tablet-width) {
-    justify-content: end;
-    gap: 28px;
+  &:hover {
+    &::after {
+      background-color: $icon-color-hover;
+    }
   }
 
   &:active {
     opacity: 0.3;
   }
-}
 
-.copyright__image {
-  color: $image-color;
-}
+  &::after {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 34px;
+    right: 0;
+    top: -50%;
 
-.copyright__link:hover .copyright__image {
-  color: $image-color-hover;
+    mask-image: url("../img/icons/sprite.svg#htmlacademy-logo");
+    background-color: $icon-color;
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 37px;
+    width: 168px;
+    justify-content: start;
+    gap: 28px;
+  }
 }

@@ -90,19 +90,23 @@ $border-color-group-feed: $basic-grey-3;
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 65px 0;
+    margin: 0 0 72px 0;
 
-    &--cat {
-      margin: 0 0 72px 0;
+    &--owner {
+      margin: 0 0 65px 0;
     }
 
     &--feed {
-      margin: 0 0 71px 0;
+      margin: 0 0 73px 0;
       border: none;
     }
 
     &--additional {
       margin: 0 0 50px 0;
+    }
+
+    &--commentary {
+      margin: 0 0 65px 0;
     }
   }
 
@@ -150,6 +154,12 @@ $border-color-group-feed: $basic-grey-3;
 
   @media (min-width: $desktop-width) {
     margin: 0 0 70px 0;
+  }
+
+  &--commentary {
+    @media (min-width: $tablet-width) {
+      margin: 0 0 70px 0;
+    }
   }
 
   &--additional {
@@ -228,7 +238,7 @@ $border-color-group-feed: $basic-grey-3;
       height: 14px;
 
       background-color: $icon-color;
-      mask-image: url("../../img/icons/sprite.svg#icon-email");
+      mask-image: url("../img/icons/sprite.svg#icon-email");
 
       @media (min-width: $tablet-width) {
         right: 18px;
@@ -254,7 +264,7 @@ $border-color-group-feed: $basic-grey-3;
       height: 16px;
 
       background-color: $icon-color;
-      mask-image: url("../../img/icons/sprite.svg#icon-phone");
+      mask-image: url("../img/icons/sprite.svg#icon-phone");
 
       @media (min-width: $tablet-width) {
         right: 18px;

@@ -32,6 +32,7 @@ $border-color-mark-hover: $special-grey-3;
 }
 
 .radio__text {
+  display: block;
   margin: 0 0 0 45px;
 
   font-family: $font-secondary;
